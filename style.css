@@ -454,8 +454,8 @@ header .main-nav .close-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 30px;
-  right: 30px;
+  top: 15px;
+  right: 15px;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   opacity: 0;
