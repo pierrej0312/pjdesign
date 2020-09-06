@@ -474,13 +474,13 @@ header .main-nav .close-nav::before, header .main-nav .close-nav::after {
 }
 
 header .main-nav .close-nav::before {
-  -webkit-transform: rotate(-45deg) translate(7px, 9px);
-          transform: rotate(-45deg) translate(7px, 9px);
+  -webkit-transform: rotate(-45deg) translate(9px, 7px);
+          transform: rotate(-45deg) translate(9px, 7px);
 }
 
 header .main-nav .close-nav::after {
-  -webkit-transform: rotate(45deg) translate(-8px, 10px);
-          transform: rotate(45deg) translate(-8px, 10px);
+  -webkit-transform: rotate(45deg) translate(-11px, 10px);
+          transform: rotate(45deg) translate(-11px, 10px);
 }
 
 header .main-nav ul {
