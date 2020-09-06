@@ -1350,9 +1350,9 @@ a.CTA:hover {
   margin-top: 0;
 }
 
-.col-to-row-desk .main-anim {
-  width: 120vw;
-  height: 60vh;
+.col-to-row-desk #main-anim {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .big-title {
