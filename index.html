@@ -1,15 +1,121 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
+
     <meta name="name" content="Pjdesign - Ux Ui web designer"/>
     <meta name="description" content="Create web site - Ux Ui specialist - SEO - Front-end - User experience - Content creator"/>
+    <meta property="og:image" content="http://pjdesign.eu/img/">
+    <meta property="og:url" content="http://pjdesign.eu/cssless/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="author" content="Pierre Juif">
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151212278-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-151212278-1');
+    </script>
     <title>Accueil - Pjdesign</title>
 </head>
+
+
 <body>
-    hello !
+    <header class="fade-up">
+            <!--logo principal-->
+            <a href="index.html" class="main-logo"><!--position relative overflow hidden-->
+                <h1>Pjdesign - pjdesign.eu - Webdesign solution - website - Ux Ui - User Experience - Front-end - recruitment - engage - Web designer - Creative</h1><!--masquer-->
+                <h2 class="title">Pjdesign.eu</h2>
+            </a>
+
+            
+            <nav class="main-nav">
+                <button class="hamburger" onclick="javascript:openMainNav();"></button><!--masquer-->
+                <button class="close-nav" onclick="javascript:closeMainNav();"></button>
+                <ul>
+                    <li class="nav-link active"><a href="/index.html">Home</a></li>
+                    <li class="nav-link"><a href="/skills.html">Skills</a></li>
+                    <li class="nav-link"><a href="/works.html">Works</a></li>
+                    <li class="nav-link"><a href="/about.html">About me</a></li>
+                    <li class="fade-in nav-link"><a href="/contact.php" class="CTA">Contact me</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <section class="fullview-container home col-reverse-to-row-desk">
+            <div class="OneCol small-width left fade-left main-descr">
+                <h2 class="big-title OneCol">I'm a<strong class="inline-CTA">Ux Ui</strong><b class="bigger-title">designer</b></h2>
+                <p>My work is to create a website or an app in considerate with User Experience. A good project needs good Ux analyse and good preparation before programming.</p>
+                <h3 class="note-hero">Interested ?</h3>
+                <a href="/contact.php" class="CTA">Contact me</a>
+            </div>
+            <div aria-hidden="true" class="main-anim loading">
+                <span class="hero-anim fade-down"></span>
+                <div class="scene-anim animate-border">
+                    <span class="planet1"></span>
+                    <span class="planet2"></span>
+                    <span class="planet3"></span>
+                    <span class="planet4"></span>
+                    <span class="planet5"></span>
+                    <span class="shootStar"></span>
+                    <span class="shootStar-2"></span>
+                    <span class="shootStar-3"></span>
+                    <span class="shootStar-4"></span>
+                </div>
+                <span class="circle-anim animate-border"></span>
+            </div>
+        </section>
+        <section>
+            <h2></h2>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <h2></h2>
+            <ul>
+                <li>
+                    <figure>
+                        <img src="" alt="">
+                        <figcaption>
+                            <p></p>
+                            <a href=""></a>      
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="country">
+            <select name="" id="">
+                <option value="BE">Belgique</option>
+                <option value="NL">Netherland</option>
+                <option value="FR">France</option>
+                <option value="INT">International</option>
+            </select>
+        </div>
+        <ul class="social-media">
+            <li><a href="http://"></a></li>
+            <li><a href="http://"></a></li>
+            <li><a href="http://"></a></li>
+            <li><a href="http://"></a></li>
+            <li><a href="http://"></a></li>
+        </ul>
+        <p class="inline-block"></p>
+    </footer>
+    <script src="animations.js"></script>
 </body>
 </html>

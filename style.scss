@@ -1,0 +1,47 @@
+@import 'variables';
+@import 'moverules';
+@import 'header';
+@import 'main';
+
+
+
+@import 'animationsscss';
+@import 'global';
+
+//img background
+/*
+.detail {
+  height: 0;
+  padding-bottom: 40%;
+  margin: 0 0 $base-spacing*2;
+  background-image: url(/Death-Star/detail_sml.jpg);
+  background-position: center center;
+  background-size: cover;
+
+  @media #{$mq-xlarge} and #{$mq-retina} {
+    background-image: url(/Death-Star/detail_sml%402x.jpg);
+  }
+
+  @media #{$mq-medium} {
+    background-image: url(Death-Star/detail_med.jpg);
+  }
+
+  @media #{$mq-medium} and #{$mq-retina} {
+    background-image: url(/Death-Star/detail_med%402x.jpg);
+  }
+
+  // Additional media queries
+
+}
+<header role="banner" class="header">
+  <div class="header__img">
+    <img  
+      srcset="./death-star_sml%402x.jpg 400w,
+      ./death-star_lrg.jpg 600w,
+      ./death-star_sml%402x.jpg 800w,
+      ./death-star_lrg%402x.jpg 1200w"
+      sizes ="(min-width:1336px) 75vw, 50vw"
+      alt="Death Star 02">
+  </div>
+</header>
+*/

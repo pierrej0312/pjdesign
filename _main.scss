@@ -1,0 +1,221 @@
+main {
+    margin-top: 120px;
+    width:80vw;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    .home {
+        .main-descr {
+            animation-delay: 0.8s;
+        }
+        
+        .main-anim {
+            width: 80vw;
+            max-width: 500px;
+            height:50vh;
+            max-height:400px;
+            position: relative;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            transform: none;
+            transition: all 300ms ease-in-out;
+        
+
+            .scene-anim {
+                width:100%;
+                height: 100%;
+                z-index: 99;
+                position: relative;
+                background: url(/img/main-anim/stars.svg),radial-gradient(144.08% 144.08% at 128.66% 110.14%, rgba(165, 198, 240, 0.81) 0%, rgba(255, 255, 255, 0.16) 100%), radial-gradient(86.02% 86.02% at -13.5% 126.41%, #E4665C 0%, #424F60 100%);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                overflow: hidden;
+
+                .planet1 {
+                    width: 30%;
+                    height: 30%;
+                    background: url(img/main-anim/planet1.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    right: -9%;
+                    top: 42%;
+                    animation: animate-object 30s linear infinite;
+                    animation-delay: -25s;
+                    transition: all 3ms 3ms ease-in-out;
+                    transform: translateX(0);
+                    z-index: 999;
+                }
+                .planet2 {
+                    width: 14%;
+                    height: 14%;
+                    background: url(img/main-anim/planet2.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    right: 63%;
+                    top: 9%;
+                    animation: animate-object 50s linear infinite;
+                    animation-delay: -35s;
+                    transition: all 3ms 3ms ease-in-out;
+                    transform: translateX(0);
+                  }
+                  .planet3 {
+                    width: 30%;
+                    height: 30%;
+                    background: url(img/main-anim/planet3.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    right: 50%;
+                    top: 20%;
+                    -webkit-animation: animate-object 30s linear infinite;
+                    animation: animate-object 30s linear infinite;
+                    -webkit-animation-delay: -5s;
+                    animation-delay: -5s;
+                    -webkit-transition: all 3ms 3ms ease-in-out;
+                    transition: all 3ms 3ms ease-in-out;
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                  }
+                  .planet4 {
+                    width: 30%;
+                    height: 30%;
+                    background: url(img/main-anim/planet4.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    right: 78%;
+                    top: 42%;
+                    -webkit-animation: animate-object 13s linear infinite;
+                    animation: animate-object 13s linear infinite;
+                    -webkit-animation-delay: -6.5s;
+                    animation-delay: -6.5s;
+                    -webkit-transition: all 3ms 3ms ease-in-out;
+                    transition: all 3ms 3ms ease-in-out;
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                  }
+                  .planet5 {
+                    width: 30%;
+                    height: 30%;
+                    background: url(img/main-anim/planet5.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    right: 14%;
+                    top: 6%;
+                    -webkit-animation: animate-object 50s linear infinite;
+                    animation: animate-object 50s linear infinite;
+                    -webkit-animation-delay: -10s;
+                    animation-delay: -10s;
+                    -webkit-transition: all 3ms 3ms ease-in-out;
+                    transition: all 3ms 3ms ease-in-out;
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                  }
+                  .shootStar {
+                    width: 5px;
+                    height: 5px;
+                    background: white;
+                    border-radius: 100%;
+                    position: absolute;
+                    top: -10%;
+                    right: 20%;
+                    opacity: 0;
+                    animation-name: shootStar;
+                    animation-duration: 8s;
+                    animation-iteration-count: infinite;
+                    animation-delay: 0s;
+                    animation-timing-function: ease-in-out;
+                  }
+                  .shootStar-2 {
+                    width: 5px;
+                    height: 5px;
+                    background: white;
+                    border-radius: 100%;
+                    position: absolute;
+                    top: -30%;
+                    right: 10%;
+                    opacity: 0;
+                    animation-name: shootStar;
+                    animation-duration: 8s;
+                    animation-iteration-count: infinite;
+                    animation-delay: 2s;
+                    animation-timing-function: ease-in-out;
+                  }
+                  .shootStar-3 {
+                    width: 5px;
+                    height: 5px;
+                    background: white;
+                    border-radius: 100%;
+                    position: absolute;
+                    top: -15%;
+                    right: 1%;
+                    opacity: 0;
+                    animation-name: shootStar;
+                    animation-duration: 8s;
+                    animation-iteration-count: infinite;
+                    animation-delay: 3s;
+                    animation-timing-function: ease-in-out;
+                  }
+                  .shootStar-4 {
+                    width: 5px;
+                    height: 5px;
+                    background: white;
+                    border-radius: 100%;
+                    position: absolute;
+                    top: -20%;
+                    right: 20%;
+                    opacity: 0;
+                    animation-name: shootStar;
+                    animation-duration: 8s;
+                    animation-iteration-count: infinite;
+                    animation-delay: 5s;
+                    animation-timing-function: ease-in-out;
+                  }
+                  
+            }
+            .circle-anim {
+                width:100%;
+                height: 100%;
+                background: $light-grey;
+                animation-duration: 8s;
+                animation-delay: -1.20s;
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                z-index: 50;
+                border: none;
+            }
+            .hero-anim {
+                position: absolute;
+                top: 20%;
+                left: 18%;
+                width: 57%;
+                height: 100%;
+                background: url(/img/main-anim/personnage_1.gif);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                z-index: 200;
+            }
+        }
+        @media screen and (max-width: 700px){
+            .main-anim {
+                height: 25vh;
+            }
+        }
+        @media screen and (min-width: 700px) {
+            .main-anim.loading {
+                transform: translateX(-50%);
+            }
+        }
+        
+    }
+}
