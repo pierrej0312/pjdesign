@@ -110,10 +110,10 @@ header {
                 transform-origin: center;
             }
             &::before {
-                transform: rotate(-45deg) translate(7px, 9px);
+                transform: rotate(-45deg) translate(5px, 11px);
             }
             &::after {
-                transform: rotate(45deg) translate(-8px, 10px);
+                transform: rotate(45deg) translate(-10px, 12px);
             }
         }
         ul {
