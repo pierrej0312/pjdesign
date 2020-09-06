@@ -479,8 +479,8 @@ header .main-nav .close-nav::before {
 }
 
 header .main-nav .close-nav::after {
-  -webkit-transform: rotate(45deg) translate(-10px, 12px);
-          transform: rotate(45deg) translate(-10px, 12px);
+  -webkit-transform: rotate(45deg) translate(-8px, 12px);
+          transform: rotate(45deg) translate(-8px, 12px);
 }
 
 header .main-nav ul {
