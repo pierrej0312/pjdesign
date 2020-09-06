@@ -526,7 +526,6 @@ header .main-nav ul li {
 
 header .main-nav ul li a {
   border: none;
-  color: #424f60;
   letter-spacing: 3px;
   font-weight: 500;
   font-size: 0.75em;
@@ -1325,6 +1324,32 @@ a.CTA:hover {
           align-items: center;
 }
 
+.col-to-row-desk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.col-to-row-desk .main-descr {
+  margin-bottom: -30px;
+  margin-top: 0;
+  z-index: 999;
+}
+
+.col-to-row-desk .main-descr .big-title {
+  margin-top: 0;
+}
+
 .big-title {
   font-family: Playfair Display;
   font-style: normal;
@@ -1553,6 +1578,21 @@ a.CTA:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .col-to-row-desk {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .col-to-row-desk div {
+    margin-bottom: 50px;
   }
   .OneCol.left {
     margin-right: 200px;

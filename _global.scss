@@ -36,6 +36,23 @@ a.CTA:hover {
         justify-content: center;
         align-items: center;
 }
+.col-to-row-desk {
+    
+    display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    .main-descr {
+        margin-bottom: -30px;
+        margin-top:0;
+        z-index: 999;
+
+        .big-title {
+            margin-top:0;
+        }
+    }
+}
 .big-title {
     font-family: Playfair Display;
             font-style: normal;
@@ -183,6 +200,14 @@ a.CTA:hover {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+    }
+    .col-to-row-desk {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        div {
+            margin-bottom: 50px;
+        }
     }
     .OneCol.left {
         margin-right: 200px;
