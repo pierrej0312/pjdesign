@@ -1350,6 +1350,11 @@ a.CTA:hover {
   margin-top: 0;
 }
 
+.col-to-row-desk .main-anim {
+  width: 120vw;
+  height: 60vh;
+}
+
 .big-title {
   font-family: Playfair Display;
   font-style: normal;
