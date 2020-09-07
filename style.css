@@ -1350,11 +1350,6 @@ a.CTA:hover {
   margin-top: 0;
 }
 
-.col-to-row-desk #main-anim {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-
 .big-title {
   font-family: Playfair Display;
   font-style: normal;
@@ -1597,7 +1592,7 @@ a.CTA:hover {
             align-items: center;
   }
   .col-to-row-desk div {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
   .OneCol.left {
     margin-right: 200px;
