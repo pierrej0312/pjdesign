@@ -10,6 +10,9 @@ a.CTA:hover {
     filter: drop-shadow(3px 4px 14px $CTA-color);
     transform: scale(1.1);
 }
+.container {
+    margin-bottom:150px;
+}
 .fullview-container {
     width: 100%;
     min-height: calc(100vh - 190px);
@@ -21,10 +24,16 @@ a.CTA:hover {
     align-items:flex-start;
     margin-bottom:50px;
     margin-top: 30px;
+    width: 100%;
+    position: relative;
 }
 .small-width {
     width:70vw;
     max-width: 400px;
+}
+.mid-width {
+    width:80vw;
+    max-width: 600px;
 }
 .OneCol.left {
     margin-right: 0px;
@@ -35,6 +44,15 @@ a.CTA:hover {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+    width:100%;
+}
+.col-to-row-reverse-desk {
+    
+    display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    width:100%;
 }
 .col-to-row-desk {
     
@@ -42,6 +60,7 @@ a.CTA:hover {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+    width:100%;
 
     .main-descr {
         margin-bottom: -30px;
@@ -78,6 +97,31 @@ a.CTA:hover {
                 font-size: $title-font-size*1.4;
             }
     margin-bottom: 30px;
+}
+.little-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+            //font-size responsive
+            font-size: $little-title-font-size;
+            line-height: $base-line-height;
+            @media #{$mq-medium} {
+                font-size: $little-title-font-size*1.1;
+                line-height: $base-line-height*1.1;
+            }
+    
+            @media #{$mq-large} {
+                font-size: $little-title-font-size*1.2;
+            }
+    
+             @media #{$mq-xlarge} {
+                font-size: $little-title-font-size*1.3;
+            }
+    
+            @media #{$mq-xxlarge} {
+                font-size: $little-title-font-size*1.4;
+            }
+    margin-bottom: 20px;
 }
 .note-hero {
     font-family: "Poppins", sans-serif;
@@ -140,6 +184,23 @@ a.CTA:hover {
     transform: translateY(-100px);
             opacity: 0;
 }
+.fade-shoot-left {
+    transform: translate(-200%, -200%) scale(0.2);
+            opacity: 0;
+    border-radius: 42% 58% 33% 67% / 68% 32% 68% 32%;
+}
+.fade-shoot-left.start {
+    transform: translate(-200%, -200%) scale(0.2) rotate(45deg) scaleX(0.2)
+        scaleY(0.2);
+        opacity: 0;
+    border-radius: 42% 58% 33% 67% / 68% 32% 68% 32%;
+            animation-name: animate-border, fadeshootleft;
+            animation-duration: 10s, 0.3s;
+            animation-iteration-count: infinite, 1;
+            animation-fill-mode: forwards;
+            animation-delay: 0s;
+            animation-timing-function: linear, cubic-bezier(1,1.59,.61,.74);
+}
 .fade-up.start {
     transform: translateY(-100px);
             opacity: 0;
@@ -185,6 +246,11 @@ a.CTA:hover {
         div {
             margin-bottom: 0px;
         }
+    }
+    .col-to-row-reverse-desk {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
     }
     .OneCol.left {
         margin-right: 200px;

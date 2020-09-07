@@ -2,7 +2,7 @@ header {
     z-index: 9998;
     position: fixed;
     top:0;
-    right: 0;
+    right: 0px;
     min-width: calc(100vw - 30px);
     padding-left: 30px;
     padding-right: 0px;
@@ -33,6 +33,7 @@ header {
             font-style: normal;
             font-weight: normal;
             text-transform: lowercase;
+            margin-bottom: 0px;
             //font-size responsive
             font-size: $title-font-size;
             line-height: $base-line-height;
@@ -227,5 +228,5 @@ header {
     @import 'header-desktop';
 }
 header.scrolled {
-    background: rgba($color: #F3F3F3, $alpha: 1.0);
+    background: $white;
 }

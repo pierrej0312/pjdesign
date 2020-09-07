@@ -241,4 +241,201 @@ main {
         }
         
     }
+    .why-me.fade-left.start {
+        animation-delay: 0.9s;
+    }
+    .anim-scene {
+        width: 80vw;
+        max-width: 300px;
+        height:50vh;
+        max-height:300px;
+        position: relative;
+        transition: all 300ms ease-in-out;
+        margin-right: 0px;
+        margin-left: 0px;
+        background: radial-gradient(199.94% 199.94% at 147.52% -99.94%, #424F60 0%, #A5C6F0 100%);
+        margin-bottom: 50px;
+
+        .lightning {
+            position: absolute;
+            width:20%;
+            height: 20%;
+            top:0%;
+            left:40%;
+            background: url(/img/main-anim/lightning.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transition: all 300ms cubic-bezier(.5,.01,.61,1.79);
+            transform: scaleX(0.2) translateY(100%);
+            opacity: 0;
+            animation-name: animate-lightning;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-delay: 0.15s;
+                animation-timing-function: cubic-bezier(.5,.01,.61,1.79);
+        }
+        .filled-anim {
+            width:20%;
+            height:0.7%;
+            background: $black;
+            position: absolute;
+            
+        }
+        .filled-anim.left-down {
+            transform-origin: left center;
+            width:20%;
+            transform: rotate(-172deg) scaleX(0);
+            top: 12%;
+            left: 37%;
+            animation-name: animate-filled1;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-delay: 0.2s;
+                animation-timing-function: cubic-bezier(.5,.01,.61,1.79);
+        }
+        .filled-anim.right-down {
+            transform-origin: right center;
+            width:22%;
+            transform: rotate(-194deg) scaleX(0);
+            top: 12%;
+            right: 37%;
+            animation-name: animate-filled2;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-delay: 0.33s;
+                animation-timing-function: cubic-bezier(.5,.01,.61,1.79);
+        }
+        .filled-anim.right-up {
+            transform-origin: right center;
+            width:22%;
+            transform: rotate(-228deg) scaleX(0);
+            top: 6%;
+            right: 42%;
+            animation-name: animate-filled4;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-delay: 0.2s;
+                animation-timing-function: cubic-bezier(.5,.01,.61,1.79);
+        }
+        .filled-anim.left-up {
+            transform-origin: left center;
+            width:15%;
+            transform: rotate(-126deg) scaleX(0);
+            top: 4%;
+            left: 43%;
+            animation-name: animate-filled3;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-delay: 0.39s;
+                animation-timing-function: cubic-bezier(.5,.01,.61,1.79);
+        }
+
+        .body {
+            position: relative;
+            width: 50%;
+            height:100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            top:20%;
+            left:25%;
+            transform: translateX(-50%);
+            
+        }
+        .hero-creative {
+            background: url(/img/main-anim/creative-hero.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation-delay: 0.9s;
+
+            .arm {
+                width: 22%;
+                height: 25%;
+                top: 16%;
+                left: 13%;
+                position: relative;
+                background: url(/img/main-anim/creative-hero-arm.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform-origin: 38% 84%;
+                transform: rotate(152deg) scaleX(1);
+                transition: all 300ms ease-in-out;
+                animation-name: animate-arm;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-delay: 0s;
+                animation-timing-function: cubic-bezier(.5,.01,.61,1.79);
+
+                .finger {
+                    width: 16%;
+                    height: 21%;
+                    bottom: 93%;
+                    left: 59%;
+                    position: absolute;
+                    border-radius: 70px;
+                    background: #C6825E;
+                    transform: rotate(16deg) scaleY(0.2);
+                    transform-origin: center bottom;
+                    animation-name: animate-finger;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                    animation-delay: 0s;
+                    animation-timing-function: ease-in-out;
+                    transition: all 300ms ease-in-out;
+                }
+            }
+            .eyebrow {
+                position: absolute;
+                width: 6%;
+                height: 0.5%;
+                background: #764F27;
+                transform: translateY(0);
+                transition: all 300ms ease-in-out;
+                animation-name: animate-eyebrow;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                    animation-delay: 0s;
+                    animation-timing-function: cubic-bezier(.5,.01,.61,1.79);
+            }
+            .eyebrow.left {
+                top: 10%;
+                left: 41%;
+            }
+            .eyebrow.right {
+                top: 10%;
+                right: 42%;
+            }
+            .eye {
+                width:4px;
+                height:4px;
+                border-radius: 100%;
+                position: absolute;
+                top: 12%;
+                transition: all 300ms ease-in-out;
+                transform: translateY(0) translateX(0);
+                background: black;
+
+                animation-name: animate-eye;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                    animation-delay: 0s;
+                    animation-timing-function: linear;
+            }
+            .eye.left {
+                left: 43%;
+            }
+            .eye.right {
+                right:45%;
+            }
+        }
+    }
+    @media screen and (min-width: 700px) {
+        .anim-scene {
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+    }
 }
