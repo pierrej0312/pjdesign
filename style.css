@@ -1020,11 +1020,26 @@ main .why-me.fade-left.start {
           animation-delay: 0.9s;
 }
 
+main .scrollfadeone.fade-left.creative-descr {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+main .scrollfadetwo.fade-right.versatile-descr {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+main .anim-versatile.scrollfadetwo.fade-shoot-left {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
 main .anim-scene {
   width: 80vw;
-  max-width: 300px;
+  max-width: 200px;
   height: 50vh;
-  max-height: 300px;
+  max-height: 200px;
   position: relative;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -1064,7 +1079,7 @@ main .anim-scene .lightning {
 main .anim-scene .filled-anim {
   width: 20%;
   height: 0.7%;
-  background: #424f60;
+  background: #e4665c;
   position: absolute;
 }
 
@@ -1290,6 +1305,8 @@ main .anim-scene .hero-creative .eye.right {
   main .anim-scene {
     margin-right: 100px;
     margin-left: 100px;
+    max-width: 300px;
+    max-height: 300px;
   }
 }
 
@@ -2151,12 +2168,12 @@ a.CTA:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -2168,12 +2185,12 @@ a.CTA:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 

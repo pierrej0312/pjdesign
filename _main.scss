@@ -244,11 +244,21 @@ main {
     .why-me.fade-left.start {
         animation-delay: 0.9s;
     }
+    .scrollfadeone.fade-left.creative-descr {
+        animation-delay: 0.5s;
+    }
+    .scrollfadetwo.fade-right.versatile-descr {
+        animation-delay: 0.7s;
+    }
+    .anim-versatile.scrollfadetwo.fade-shoot-left {
+        animation-delay: 0.3s;
+    }
+    
     .anim-scene {
         width: 80vw;
-        max-width: 300px;
+        max-width: 200px;
         height:50vh;
-        max-height:300px;
+        max-height:200px;
         position: relative;
         transition: all 300ms ease-in-out;
         margin-right: 0px;
@@ -278,7 +288,7 @@ main {
         .filled-anim {
             width:20%;
             height:0.7%;
-            background: $black;
+            background: $CTA-color;
             position: absolute;
             
         }
@@ -436,6 +446,8 @@ main {
         .anim-scene {
             margin-right: 100px;
             margin-left: 100px;
+            max-width: 300px;
+            max-height: 300px;
         }
     }
 }
