@@ -169,8 +169,10 @@ a.CTA:hover {
 .fade-right {
     transform: translateX(150px);
             opacity: 0;
+    display:none;
 }
 .fade-right.start {
+    display:flex;
     transform: translateX(150px);
             opacity: 0;
     animation-name: RightComing;
@@ -188,8 +190,10 @@ a.CTA:hover {
     transform: translate(-200%, -200%) scale(0.2);
             opacity: 0;
     border-radius: 42% 58% 33% 67% / 68% 32% 68% 32%;
+    display:none;
 }
 .fade-shoot-left.start {
+    display:block;
     transform: translate(-200%, -200%) scale(0.2) rotate(45deg) scaleX(0.2)
         scaleY(0.2);
         opacity: 0;
