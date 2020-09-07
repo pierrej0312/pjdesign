@@ -251,6 +251,9 @@ a.CTA:hover {
             margin-bottom: 0px;
         }
     }
+    .fullview-container.col-to-row-desk {
+        justify-content: space-between;
+    }
     .col-to-row-reverse-desk {
         flex-direction: row-reverse;
         justify-content: center;

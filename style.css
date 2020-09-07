@@ -1172,8 +1172,21 @@ main .anim-scene .body {
   background-repeat: no-repeat;
   top: 20%;
   left: 25%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+}
+
+main .anim-scene .hero-versatile {
+  background: url(/img/main-anim/versatile-hero.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+main .anim-scene .hero-versatile.body {
+  width: 100%;
+  left: -10%;
+  display: block;
 }
 
 main .anim-scene .hero-creative {
@@ -2481,6 +2494,11 @@ a.CTA:hover {
   }
   .col-to-row-desk div {
     margin-bottom: 0px;
+  }
+  .fullview-container.col-to-row-desk {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .col-to-row-reverse-desk {
     -webkit-box-orient: horizontal;

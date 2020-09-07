@@ -350,8 +350,19 @@ main {
             background-repeat: no-repeat;
             top:20%;
             left:25%;
-            transform: translateX(-50%);
             
+        }
+        .hero-versatile {
+            background: url(/img/main-anim/versatile-hero.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation-delay: 0.9s;
+        }
+        .hero-versatile.body {
+            width:100%;
+            left:-10%;
+            display:block;
         }
         .hero-creative {
             background: url(/img/main-anim/creative-hero.svg);

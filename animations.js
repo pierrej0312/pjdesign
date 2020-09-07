@@ -32,6 +32,7 @@ window.addEventListener("scroll", ()=> {
     if(document.body.scrollTop > scrollfadetwoPanel || document.documentElement.scrollTop > scrollfadetwoPanel){
         document.querySelector(".scrollfadetwo.fade-shoot-left").classList.add("start");
         document.querySelector(".scrollfadetwo.fade-right").classList.add("start");
+        document.querySelector(".scrollfadetwo.fade-down").classList.add("start");
     }
 });
 
