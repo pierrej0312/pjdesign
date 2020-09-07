@@ -20,7 +20,7 @@ main {
             display:flex;
             justify-content: center;
             align-items: center;
-            transform: none;
+            transform: translateX(-0%) scale(1);
             transition: all 300ms ease-in-out;
         
 
@@ -211,9 +211,32 @@ main {
                 height: 25vh;
             }
         }
+        @media #{$mq-medium} {
+            .main-anim {
+                transform: translateX(-0%) scale(1.1);
+            }
+        }
+
+        @media #{$mq-large} {
+            .main-anim {
+                transform: translateX(-0%) scale(1.2);
+            }
+        }
+
+         @media #{$mq-xlarge} {
+            .main-anim {
+                transform: translateX(-0%) scale(1.3);
+            }
+        }
+
+        @media #{$mq-xxlarge} {
+            .main-anim {
+                transform: translateX(-0%) scale(1.4);
+            }
+        }
         @media screen and (min-width: 700px) {
             .main-anim.loading {
-                transform: translateX(-50%);
+                transform: translateX(-75%) scale(0.5);
             }
         }
         
