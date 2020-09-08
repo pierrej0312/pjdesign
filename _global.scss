@@ -14,8 +14,10 @@ a.CTA:hover {
     margin-bottom:150px;
 }
 .fullview-container {
-    width: 100%;
+    width: 80vw;
     min-height: calc(100vh - 190px);
+    margin-left:auto;
+    margin-right: auto;
 }
 .OneCol {
     display: flex;
@@ -24,8 +26,18 @@ a.CTA:hover {
     align-items:flex-start;
     margin-bottom:50px;
     margin-top: 30px;
-    width: 100%;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.OneCol.marginless {
+    margin-bottom:0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.OneCol.marginless.title {
+    margin-bottom: 30px;
 }
 .small-width {
     width:70vw;
@@ -44,7 +56,6 @@ a.CTA:hover {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-    width:100%;
 }
 .col-to-row-reverse-desk {
     
@@ -52,7 +63,6 @@ a.CTA:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    width:100%;
 }
 .col-to-row-desk {
     
@@ -60,7 +70,6 @@ a.CTA:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    width:100%;
 
     .main-descr {
         margin-bottom: -30px;
@@ -252,7 +261,7 @@ a.CTA:hover {
         }
     }
     .fullview-container.col-to-row-desk {
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .col-to-row-reverse-desk {
         flex-direction: row-reverse;
@@ -261,5 +270,113 @@ a.CTA:hover {
     }
     .OneCol.left {
         margin-right: 200px;
+    }
+}
+.opposite-background {
+    background: $black;
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+    padding-top: 100px;
+    h2 {
+        color: $white;
+    }
+    h3 {
+        color: $white;
+    }
+    h4 {
+        color: $white;
+    }
+    p {
+        color: $white;
+    }
+    a {
+        color: $white;
+        border: 1px solid $white;
+    }
+}
+.full-width {
+    width: 100vw;
+    max-width: none;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.swipe-container {
+    display: flex;
+    align-items: center;
+    --n: 1;
+    --w: 60vw;
+    transition: all 300ms ease-in-out;
+    //width: calc(var(--n)*60vw);
+    //transform: translate(calc(var(--i)/var(--n)*-60vw));
+
+    
+
+    .swipe-content {
+        min-width: 60vw;
+        max-width: 60vw;
+        padding-right: 50px;
+        padding-left:10px;
+        height: 300px;
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        //width: calc(60vw/var(--n));
+    }
+}
+.slider-buttons {
+    display: none;
+    z-index: 99;
+}
+.slider-button {
+    position: absolute;
+    top: calc(50% + 2em + 50px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $black;
+    border-radius: 100%;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    p {
+        display: block;
+        position: absolute;
+        top:-50%;
+    }
+}
+.button-left.slider-button {
+    left:10vw;
+}
+.button-right.slider-button {
+    right:10vw;
+}
+.slider-button:hover,
+.slider-button:focus {
+    transform: scale(1.1);
+}
+@media screen and (min-width: 700px) {
+    .swipe-container {
+        //width: calc(var(--n)*100vw);
+        //transform: translate(calc(var(--i)/var(--n)*-100vw));
+        
+    
+        .swipe-content {
+            min-width: 100vw;
+            max-width: 100vw;
+            height: 60vh;
+            padding: 0px;
+            padding-left: 0px;
+            width: calc(100vw/var(--n));
+        }
+    }
+    .slider-buttons {
+        display: flex;
     }
 }

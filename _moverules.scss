@@ -31,9 +31,18 @@ body {
         font-size: $base-font-size*1.4;
       }
 }
+section {
+  width:80vw;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
 ul {
     list-style: none;
     padding-inline-start: 0px;
+    margin:0;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 li {
     text-decoration: none;
