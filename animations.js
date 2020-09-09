@@ -15,24 +15,33 @@ window.addEventListener("scroll", ()=> {
     }
 });
 
-let scrollfadeonePanel = window.innerHeight*2 - 500;
+let scrollfadeonePanel = window.innerHeight - 500;
 
 window.addEventListener("scroll", ()=> {
     
     if(document.body.scrollTop > scrollfadeonePanel || document.documentElement.scrollTop > scrollfadeonePanel){
-        document.querySelector(".scrollfadeone.fade-shoot-left").classList.add("start");
-        document.querySelector(".scrollfadeone.fade-left").classList.add("start");
         document.querySelector(".scrollfadeone.fade-down").classList.add("start");
     }
 });
-let scrollfadetwoPanel = window.innerHeight*2 + 100;
+let scrollfadetwoPanel = window.innerHeight + 300;
 
 window.addEventListener("scroll", ()=> {
     
     if(document.body.scrollTop > scrollfadetwoPanel || document.documentElement.scrollTop > scrollfadetwoPanel){
         document.querySelector(".scrollfadetwo.fade-shoot-left").classList.add("start");
-        document.querySelector(".scrollfadetwo.fade-right").classList.add("start");
+        document.querySelector(".scrollfadetwo.fade-left").classList.add("start");
         document.querySelector(".scrollfadetwo.fade-down").classList.add("start");
+    }
+});
+
+let scrollfadetreePanel = window.innerHeight*2 - 200;
+
+window.addEventListener("scroll", ()=> {
+    
+    if(document.body.scrollTop > scrollfadetreePanel || document.documentElement.scrollTop > scrollfadetreePanel){
+        document.querySelector(".scrollfadetree.fade-shoot-left").classList.add("start");
+        document.querySelector(".scrollfadetree.fade-down").classList.add("start");
+        document.querySelector(".scrollfadetree.fade-right").classList.add("start");
     }
 });
 
@@ -48,8 +57,9 @@ window.addEventListener("load", function() {
 
 //swipe car
 
-const _C = document.querySelector('.swipe-container'),
-      N = _C.children.length;
+const _C = document.querySelector('.swipe-content'),
+      N = document.querySelector('.swipe-content').children.length;
+
 
     //let swipeContents = Array.from(_C.children);
       
@@ -61,28 +71,42 @@ const _C = document.querySelector('.swipe-container'),
     function showTab(n) {
         
 
-        var x = document.getElementsByClassName("swipe-content");
+        var i, x = document.getElementsByClassName("swipe-content");
 
-        var w = document.querySelector(".swipe-content").offsetWidth;
+        var W = document.querySelector(".swipe-content").offsetWidth;
         
-        x[n].classList.add('currentSlide');
+        
+            x[n].classList.add('currentSlide');
+            x[currentTab + 1].classList.add('nextSlide');
+            x[currentTab].classList.remove('nextSlide');
+            x[currentTab].classList.remove('prevSlide');
+            document.querySelector('.swipe-container').style.setProperty('--currentTab', currentTab);
+            document.querySelector('.swipe-container').style.setProperty('--w', W + "px");
+            //document.querySelector('.swipe-container').style.setProperty('--tx', '0px');
+            //document.querySelector('.swipe-container').setAttribute('style','transform:translateX(calc(' + currentTab + '*(-' + w + 'px)));');
 
-
-        //document.querySelector('.swipe-container').style./*display = "none"; */transform = "translate-x(calc(" + (currentTab + 1) + "*-" + w + ")";
-        document.querySelector('.swipe-container').setAttribute('style','transform:translateX(calc(' + currentTab + '*(-' + w + 'px)));');
+        if (n > 0 && n < (x.length - 2)) {
+            x[currentTab - 1].classList.add('prevSlide');
+        }
 
         if (n == 0) {
             document.querySelector(".button-left.slider-button").style.display = "none";
           } else {
             document.querySelector(".button-left.slider-button").style.display = "flex";
         }
-        if (n == (x.length - 1)) {
+        if (n == (x.length - 3)) {
             document.querySelector(".button-right.slider-button").style.display = "none";
           } else {
             document.querySelector(".button-right.slider-button").style.display = "flex";
         }
+        
+        
+        //document.querySelector('.swipe-container').style./*display = "none"; */transform = "translate-x(calc(" + (currentTab + 1) + "*-" + w + ")";
+        
 
     }
+
+
     function nextPrev(n) {
             
         var x = document.getElementsByClassName("swipe-content");
@@ -92,69 +116,116 @@ const _C = document.querySelector('.swipe-container'),
         currentTab = currentTab + n;
        
         showTab(currentTab);
-
-        console.log(currentTab);
     }
 
 //transform: translate(calc(var(--i)/var(--n)*-60vw));
-/*
-let startX = 0;
-let startY = 0;
 
-const gestureZone = document.querySelector('.swipe-container');
+function unify(e) { return e.changedTouches ? e.changedTouches[0] : e };
 
-gestureZone.addEventListener('touchstart', function(event) {
-    handleTouchStart();
-}, false);
+let x0 = null;
 
-gestureZone.addEventListener('touchend', function(event) {
-    handleTouchEnd();
-}, false); 
+let locked = false;
 
-function handleTouchStart(e) {
-  startX = e.changedTouches[0].screenX;
-  startY = e.changedTouches[0].screenY;
-}
+let w;
 
-function handleTouchEnd(e) {
-  const diffX = e.changedTouches[0].screenX - startX;
-  const diffY = e.changedTouches[0].screenY - startY;
-  const ratioX = Math.abs(diffX / diffY);
-  const ratioY = Math.abs(diffY / diffX);
-  const absDiff = Math.abs(ratioX > ratioY ? diffX : diffY);
+function lock(e) { 
 
-  // Ignore small movements.
-  if (absDiff < 30) {
-    return;
-  }
+    x0 = unify(e).clientX 
+    document.querySelector('.swipe-container').classList.toggle('smooth', !(locked = true));
+};
 
-  if (ratioX > ratioY) {
-    if (diffX >= 0) {
+let i = 0;
+
+function drag(e) {
+    e.preventDefault();
+
+  if(locked) {
+    document.querySelector('.swipe-container').style.setProperty('--tx', `${Math.round(unify(e).clientX - x0)}px`)
+    //document.querySelectorAll('.swipe-content').setAttribute('style','transform:translateX(calc(' + Math.round(unify(e).clientX - x0) + 'px));');
+    //_C.style.setProperty('--tx', `${Math.round(unify(e).clientX - x0)}px`)
+  }   
+};
+
+function size() { w = window.innerWidth };
+
+function move(e) {
+  if(locked) {
+    let dx = unify(e).clientX - x0, s = Math.sign(dx),
+        f = +(s*dx/w).toFixed(2);
+  
+    if((i > 0 || s < 0) && f > .2) {
         var x = document.getElementsByClassName("swipe-content");
 
-        x[currentTab].classList.remove("currentSlide");
+        //document.querySelector('.swipe-container').style.setProperty('--tx', '0px');
 
-        currentTab = currentTab + 1;
+        if(currentTab == (x.length - 3) || currentTab > (x.length - 3)) {
+            document.querySelector('.swipe-container').style.setProperty('--tx', '0px');
+            document.querySelector('.swipe-container').classList.toggle('smooth', !(locked = false));
+            x0 = null
+            return
+        }
+        else {
+            x[currentTab].classList.remove("currentSlide");
+
+            currentTab = currentTab + 1;
        
-        showTab(currentTab);
+            showTab(currentTab);
+
+            f = 1 - f
+
+            document.querySelector('.swipe-container').style.setProperty('--tx', '0px');
+            document.querySelector('.swipe-container').classList.toggle('smooth', !(locked = false));
+            x0 = null
+        }
+
+        x0 = null
+
+
     } else {
+
         var x = document.getElementsByClassName("swipe-content");
 
-        x[currentTab].classList.remove("currentSlide");
+        if(currentTab == 0 || currentTab < 0) {
+            document.querySelector('.swipe-container').style.setProperty('--tx', '0px');
+            document.querySelector('.swipe-container').classList.toggle('smooth', !(locked = false));
+            x0 = null
+            return
+        }
+        else {
+            x[currentTab].classList.remove("currentSlide");
 
-        currentTab = currentTab - 1;
+            currentTab = currentTab - 1;
        
-        showTab(currentTab);
-    }
-  } else {
-    if (diffY >= 0) {
-      console.log('down swipe');
-    } else {
-      console.log('up swipe');
+            showTab(currentTab);
+
+            f = 1 - f
+
+            document.querySelector('.swipe-container').style.setProperty('--tx', '0px');
+            document.querySelector('.swipe-container').classList.toggle('smooth', !(locked = false));
+            x0 = null
+        }
+        
+        x0 = null
     }
   }
-}
-*/
+};
+
+size();
+
+addEventListener('resize', size, false);
+
+document.querySelector('.swipe-container').addEventListener('mousedown', lock, false);
+document.querySelector('.swipe-container').addEventListener('touchstart', lock, false);
+
+document.querySelector('.swipe-container').addEventListener('mouseup', move, false);
+document.querySelector('.swipe-container').addEventListener('touchend', move, false);
+
+document.querySelector('.swipe-container').addEventListener('touchmove', e => {e.preventDefault()}, false)
+
+
+document.querySelector('.swipe-container').addEventListener('mousemove', drag, false);
+document.querySelector('.swipe-container').addEventListener('touchmove', drag, false);
+
 
 
 
@@ -373,6 +444,70 @@ function handleTouchEnd(e) {
       console.log('right swipe');
     } else {
       console.log('left swipe');
+    }
+  } else {
+    if (diffY >= 0) {
+      console.log('down swipe');
+    } else {
+      console.log('up swipe');
+    }
+  }
+}
+
+
+
+
+
+
+
+
+let startX = 0;
+let startY = 0;
+
+const gestureZone = document.querySelector('.swipe-container');
+
+gestureZone.addEventListener('touchstart', function(event) {
+    handleTouchStart();
+}, false);
+
+gestureZone.addEventListener('touchend', function(event) {
+    handleTouchEnd();
+}, false); 
+
+function handleTouchStart(e) {
+  startX = e.changedTouches[0].screenX;
+  startY = e.changedTouches[0].screenY;
+}
+
+function handleTouchEnd(e) {
+  const diffX = e.changedTouches[0].screenX - startX;
+  const diffY = e.changedTouches[0].screenY - startY;
+  const ratioX = Math.abs(diffX / diffY);
+  const ratioY = Math.abs(diffY / diffX);
+  const absDiff = Math.abs(ratioX > ratioY ? diffX : diffY);
+
+  // Ignore small movements.
+  if (absDiff < 30) {
+    return;
+  }
+
+  if (ratioX > ratioY) {
+    if (diffX >= 0) {
+        var x = document.getElementsByClassName("swipe-content");
+
+        x[currentTab].classList.remove("currentSlide");
+
+        currentTab = currentTab + 1;
+       
+        showTab(currentTab);
+    } else {
+        var x = document.getElementsByClassName("swipe-content");
+
+        x[currentTab].classList.remove("currentSlide");
+
+        currentTab = currentTab - 1;
+       
+        showTab(currentTab);
     }
   } else {
     if (diffY >= 0) {

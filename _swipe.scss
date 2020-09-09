@@ -1,0 +1,108 @@
+//swipe slider caroussel
+
+.swipe-container.smooth {
+    transition: transform calc(var(--f, 1)*.5s) ease-out;
+}
+.swipe-container {
+    display: flex;
+    align-items: center;
+    --n: 1;
+    --currentTab: 0;
+    --w: 60vw;
+    --tx: 0px;
+    transform: translate(calc(var(--currentTab)*-100vw + var(--tx, 0px))/**/);
+    //document.querySelector('.swipe-container').setAttribute('style','transform:translateX(calc(' + currentTab + '*(-' + w + 'px)));');
+    transition: all 300ms ease-in-out;
+    width: 500vw;
+    margin-top:50px;
+    //transform: translate(calc(var(--i)/var(--n)*-60vw));
+
+    
+
+    .swipe-content {
+        min-width: 100vw;
+        max-width: 100vw;
+        padding-right: 0px;
+        padding-left: 0px;
+        height: 60vh;
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        //width: calc(60vw/var(--n));
+        pointer-events: none;
+        z-index: 1;
+        transition: all 300ms ease-in-out;
+    }
+    .swipe-content.currentSlide {
+        transform: scale(1.1);
+    }
+    .swipe-content.nextSlide {
+        margin-left: -30vw;
+        z-index: -99;
+    }
+    .swipe-content.prevSlide {
+        transform: translateX(30vw);
+        z-index: -99;
+    }
+}
+.slider-buttons {
+    display: none;
+    z-index: 99;
+}
+.slider-button {
+    position: absolute;
+    top: calc(50% + 2em + 50px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $black;
+    border-radius: 100%;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    p {
+        display: block;
+        position: absolute;
+        top:-50%;
+    }
+}
+.button-left.slider-button {
+    left:10vw;
+}
+.button-right.slider-button {
+    right:10vw;
+}
+.slider-button:hover,
+.slider-button:focus {
+    transform: scale(1.1);
+}
+@media screen and (min-width: 700px) {
+    .swipe-container {
+        //width: calc(var(--n)*100vw);
+        //transform: translate(calc(var(--i)/var(--n)*-100vw));
+        width: 500vw;
+        
+    
+        .swipe-content {
+            min-width: 100vw;
+            max-width: 100vw;
+            height: 60vh;
+            padding: 0px;
+            padding-left: 0px;
+            width: calc(100vw/var(--n));
+        }
+        .swipe-content.nextSlide {
+            margin-left: -40vw;
+        }
+        .swipe-content.prevSlide {
+            transform: translateX(40vw);
+        }
+    }
+    .slider-buttons {
+        display: flex;
+    }
+}

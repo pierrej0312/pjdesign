@@ -1,0 +1,77 @@
+// titles
+.big-title {
+    text-transform: uppercase;
+    //font-size responsive
+    font-size: $title-font-size;
+    line-height: $base-line-height;
+    @media #{$mq-medium} {
+        font-size: $title-font-size*1.1;
+        line-height: $base-line-height*1.1;
+    }
+
+    @media #{$mq-large} {
+        font-size: $title-font-size*1.2;
+    }
+
+     @media #{$mq-xlarge} {
+        font-size: $title-font-size*1.3;
+    }
+
+    @media #{$mq-xxlarge} {
+        font-size: $title-font-size*1.4;
+    }
+margin-bottom: 30px;
+}
+.little-title {
+text-transform: uppercase;
+    //font-size responsive
+    font-size: $little-title-font-size;
+    line-height: $base-line-height;
+    @media #{$mq-medium} {
+        font-size: $little-title-font-size*1.1;
+        line-height: $base-line-height*1.1;
+    }
+
+    @media #{$mq-large} {
+        font-size: $little-title-font-size*1.2;
+    }
+
+     @media #{$mq-xlarge} {
+        font-size: $little-title-font-size*1.3;
+    }
+
+    @media #{$mq-xxlarge} {
+        font-size: $little-title-font-size*1.4;
+    }
+margin-bottom: 20px;
+}
+.note-hero {
+font-family: "Poppins", sans-serif;
+font-weight: 500;
+color: $black;
+margin-bottom: 20px;
+//font-size responsive
+font-size: $link-font-size;
+line-height: $base-line-height;
+text-transform: uppercase;
+@media #{$mq-medium} {
+font-size: $link-font-size*1.1;
+line-height: $base-line-height*1.1;
+}
+
+@media #{$mq-large} {
+font-size: $link-font-size*1.2;
+}
+
+@media #{$mq-xlarge} {
+font-size: $link-font-size*1.3;
+}
+
+@media #{$mq-xxlarge} {
+font-size: $link-font-size*1.4;
+}
+}
+.inline-CTA {
+display: inline-block;
+color: $CTA-color;
+}

@@ -1,0 +1,41 @@
+//gradient-CTA background 
+.gradient-CTA.become-hero {
+    background: linear-gradient(99.52deg, rgba($color: $CTA-color, $alpha: 0.8) -31.87%, rgba($color: $CTA-color, $alpha: 1) 116.77%), url(/img/become-hero/small/become-hero.jpg);
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+    background-position-y: center, bottom;
+    background-position-x: center, center;
+    padding-top:150px;
+    padding-bottom: 150px;
+    @media #{$mq-xlarge} and #{$mq-retina} {
+        background-image: linear-gradient(99.52deg, rgba($color: $CTA-color, $alpha: 0.8) -31.87%, rgba($color: $CTA-color, $alpha: 1) 116.77%), url(/img/become-hero/xlarge/become-hero.jpg);
+      }
+    
+      @media #{$mq-medium} {
+        background-image: linear-gradient(99.52deg, rgba($color: $CTA-color, $alpha: 0.8) -31.87%, rgba($color: $CTA-color, $alpha: 1) 116.77%), url(/img/become-hero/medium/become-hero.jpg);
+      }
+    
+      @media #{$mq-medium} and #{$mq-retina} {
+        background-image: linear-gradient(99.52deg, rgba($color: $CTA-color, $alpha: 0.8) -31.87%, rgba($color: $CTA-color, $alpha: 1) 116.77%), url(/img/become-hero/medium/become-hero.jpg);
+      }
+    h2 {
+        color: white;
+    }
+    h3 {
+        color: white;
+    }
+    h4 {
+        color: white;
+    }
+    p {
+        color: white;
+    }
+    a {
+        color: white;
+        border-color: white;
+    }
+    .CTA {
+        background-color: white;
+        color: $CTA-color;
+    }
+}

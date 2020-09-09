@@ -1,0 +1,24 @@
+//opposite bg
+.opposite-background {
+    background: $black;
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+    padding-top: 100px;
+    h2 {
+        color: $white;
+    }
+    h3 {
+        color: $white;
+    }
+    h4 {
+        color: $white;
+    }
+    p {
+        color: $white;
+    }
+    a {
+        color: $white;
+        border: 1px solid $white;
+    }
+}

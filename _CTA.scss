@@ -1,0 +1,14 @@
+//CTA
+
+a.CTA {
+    background: $CTA-color;
+    color: $white;
+    font-weight: 500;
+    border: none;
+    width: fit-content;
+    padding: 10px 30px;
+}
+a.CTA:hover {
+    filter: drop-shadow(3px 4px 14px $CTA-color);
+    transform: scale(1.1);
+}

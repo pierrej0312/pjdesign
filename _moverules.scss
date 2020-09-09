@@ -174,10 +174,9 @@ h2 {
 h3 {
     margin:0;
     padding:0;
-    font-family: Playfair Display;
-            font-style: normal;
-            font-weight: normal;
-            text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
             //font-size responsive
     font-size: $base-font-size;
     line-height: $base-line-height;
@@ -201,10 +200,9 @@ h3 {
 h4 {
     margin:0;
     padding:0;
-    font-family: Playfair Display;
-            font-style: normal;
-            font-weight: normal;
-            text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
             //font-size responsive
     font-size: $link-font-size;
     line-height: $base-line-height;

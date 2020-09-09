@@ -1,0 +1,111 @@
+//container display
+.container {
+    margin-bottom:150px;
+}
+.fullview-container {
+    width: 80vw;
+    min-height: calc(100vh - 190px);
+    margin-left:auto;
+    margin-right: auto;
+}
+.OneCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    //margin-bottom:50px;
+    margin-top: 30px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.OneCol.marginless {
+    margin-bottom:0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.OneCol.marginless.title {
+    margin-bottom: 30px;
+}
+.OneCol.center {
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+.small-width {
+    width:70vw;
+    max-width: 400px;
+}
+.mid-width {
+    max-width: 600px;
+}
+.OneCol.left {
+    margin-right: 0px;
+}
+.col-reverse-to-row-desk {
+    
+    display:flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+}
+.col-to-row-reverse-desk {
+    
+    display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.col-to-row-desk {
+    
+    display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    .main-descr {
+        margin-bottom: -30px;
+        margin-top:0;
+        z-index: 999;
+
+        .big-title {
+            margin-top:0;
+        }
+    }
+}
+.full-width {
+    width: 100vw;
+    max-width: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+@media screen and (min-width: 700px) {
+    .col-reverse-to-row-desk {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .col-to-row-desk {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        div {
+            margin-bottom: 0px;
+        }
+    }
+    .fullview-container.col-to-row-desk {
+        justify-content: space-around;
+    }
+    .col-to-row-reverse-desk {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .OneCol.left {
+        margin-right: 200px;
+    }
+}
