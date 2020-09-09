@@ -1369,7 +1369,7 @@ main .swipe-container .swipe-content figure img {
 }
 
 main .swipe-container .swipe-content figure figcaption {
-  width: calc(60% - 100px);
+  width: calc(80% - 100px);
   height: calc(45% - 100px);
   top: 60%;
   display: -webkit-box;
