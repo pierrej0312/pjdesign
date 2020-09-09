@@ -54,7 +54,14 @@
             </nav>
     </header>
     <main>
-        <section class="fullview-container home col-to-row-desk container">
+        <nav class="inside-nav fade-left">
+            <ul>
+                <li class="inside-link"><a href="#top" onclick="javascript:toscrollTop();">To top</a></li>
+                <li class="inside-link"><a href="#latestworks" onclick="javascript:toscrolllatestworks();">Latest works</a></li>
+                <li class="inside-link"><a href="#whyme" onclick="javascript:toscrollwhyme();">Why me</a></li>
+            </ul>
+        </nav>
+        <section class="fullview-container home col-to-row-desk container" id="top">
             <div class="OneCol marginless small-width left fade-left main-descr">
                 <h2 class="big-title OneCol title marginless">I'm a<strong class="inline-CTA">Ux Ui</strong><b class="bigger-title">designer</b></h2>
                 <p>My work is to create a website or an app in considerate with User Experience. A good project needs good Ux analyse and good preparation before programming.</p>
@@ -78,13 +85,13 @@
             </div>
         </section>
 
-        <section class="full-width scrollfadeone fade-down">
+        <section class="full-width scrollfadeone fade-down" id="latestworks">
             <h2 class="title">Latest Works</h2>
             <ul class="swipe-container">
                 <li class="swipe-content">
                     <figure>
                         <img src="" alt="">
-                        <figcaption>
+                        <figcaption data-color="radial-gradient(160.45% 57.32% at -24.34% 14.24%, #336099 0%, #50B0A2 100%">
                             <h3 class="little-title">Balabulle</h3>
                             <p></p>    
                         </figcaption>
@@ -93,7 +100,7 @@
                 <li class="swipe-content">
                     <figure>
                         <img src="" alt="">
-                        <figcaption>
+                        <figcaption data-color="radial-gradient(89.65% 89.65% at 102.13% 133.32%, #FFC603 0%, rgba(255, 198, 3, 0) 100%), #D35C50">
                             <h3 class="little-title">Wallcom</h3>
                             <p></p>    
                         </figcaption>
@@ -102,7 +109,7 @@
                 <li class="swipe-content">
                     <figure>
                         <img src="" alt="">
-                        <figcaption>
+                        <figcaption data-color="#F3DEBF">
                             <h3 class="little-title">Potagio</h3>
                             <p></p>     
                         </figcaption>
@@ -111,7 +118,7 @@
                 <li class="swipe-content">
                     <figure>
                         <img src="" alt="">
-                        <figcaption>
+                        <figcaption data-color="#E0F9AE">
                             <h3 class="little-title">Chevetogne</h3>
                             <p></p>   
                         </figcaption>
@@ -121,30 +128,31 @@
                     <figure>
                         <img src="" alt="">
                         <figcaption>
-                            <h3 class="little-title">Pjdesign</h3>
+                            <h3 class="little-title" data-color="white">Pjdesign</h3>
                             <p></p> 
                         </figcaption>
                     </figure>
                 </li>
-                <li class="swipe-content swipe-end" aria-hidden="true">
+                <li class="swipe-content swipe-end" aria-hidden="true" data-color="black">
+                    <figure>
+                        <figcaption class="transparent"></figcaption>
+                    </figure>
                 </li>
                 <li class="swipe-content swipe-end" aria-hidden="true">
                 </li>
             </ul>
             <div class="slider-buttons">
-                <div class="CTA button-left slider-button" onclick="nextPrev(-1)">
-                    <span> < </span>
-                    <p>Previous</p> 
+                <div class="CTA button-left slider-button" aria-labelledby="previous" onclick="nextPrev(-1)">
+                    <p id="previous">Previous</p> 
                 </div> 
-                <div class="CTA button-right slider-button" onclick="nextPrev(1)">
-                    <span> > </span>
-                    <p>Next</p>
+                <div class="CTA button-right slider-button" aria-labelledby="next" onclick="nextPrev(1)">
+                    <p id="next">Next</p>
                 </div>
             </div>   
         </section>
 
 
-        <section class="OneCol container">
+        <section class="OneCol container" id="whyme">
             <h2 class="why-me fade-left">Why me ?</h2>
             <ul class="OneCol">
             <li class="col-to-row-desk container">
@@ -186,7 +194,7 @@
         <section class="full-width gradient-CTA become-hero margin-top-corr OneCol center">
             <h4 class="little-title">It's time</h4>
             <p class="note-hero">to</p>
-            <h3 class="big-title">Work with me !</h4>
+            <h3 class="big-title">Work with me !</h3>
             <a href="/contact.php" class="CTA MoreMarginTop">Contact me</a>
         </section>
     

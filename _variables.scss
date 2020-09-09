@@ -1,7 +1,7 @@
 //colors
-$white: #F3F3F3;
+$white: #F3F3F3 /*#424f60*/;
 $CTA-color:#e4665c;
-$black:  #424f60;
+$black:  #424f60 /*#F3F3F3*/;
 $grey: #829CBD;
 $light-grey:#A5C6F0;
 $error:#E30026;
@@ -30,6 +30,7 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 // Font-Size
 $base-font-size: 0.95em;
 $link-font-size: 0.75em;
+$little-link-font-size: 0.6em;
 $little-title-font-size: 1.1em;
 $title-font-size: 1.5em;
 

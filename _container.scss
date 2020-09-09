@@ -3,10 +3,15 @@
     margin-bottom:150px;
 }
 .fullview-container {
-    width: 80vw;
+    width: 70vw;
     min-height: calc(100vh - 190px);
     margin-left:auto;
     margin-right: auto;
+}
+@media screen and (min-width: 700px) {
+    .fullview-container {
+        width: 60vw;
+    }
 }
 .OneCol {
     display: flex;
@@ -34,7 +39,7 @@
     padding-top: 50px;
 }
 .small-width {
-    width:70vw;
+    width:60vw;
     max-width: 400px;
 }
 .mid-width {

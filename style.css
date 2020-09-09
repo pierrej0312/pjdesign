@@ -1,3 +1,5 @@
+/*#424f60*/
+/*#F3F3F3*/
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Poppins:300,300i,400,500,500i,700,700i&display=swap");
 body {
   width: 100vw;
@@ -41,10 +43,16 @@ body {
 }
 
 section {
-  width: 80vw;
+  width: 70vw;
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 700px) {
+  section {
+    width: 60vw;
+  }
 }
 
 ul {
@@ -363,14 +371,14 @@ header .main-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  width: 15vw;
+  width: 22vw;
   height: 50px;
   border: none;
 }
@@ -586,7 +594,7 @@ header .main-nav ul .fade-in {
 }
 
 header .main-nav ul .fade-in .CTA {
-  color: #F3F3F3;
+  color: white;
 }
 
 header .main-nav ul .nav-link.active a {
@@ -1346,9 +1354,24 @@ main .swipe-container .swipe-content figure {
   position: relative;
 }
 
+main .swipe-container .swipe-content figure img {
+  width: 90%;
+  height: 50%;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
 main .swipe-container .swipe-content figure figcaption {
   width: calc(60% - 100px);
-  height: calc(60% - 100px);
+  height: calc(45% - 100px);
+  top: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1361,18 +1384,69 @@ main .swipe-container .swipe-content figure figcaption {
       -ms-flex-align: center;
           align-items: center;
   padding: 50px;
+  padding-top: calc(50px + 15%);
   border-radius: 70px;
   background: #F3F3F3;
   -webkit-box-shadow: 10px 10px 20px rgba(66, 79, 96, 0.3);
           box-shadow: 10px 10px 20px rgba(66, 79, 96, 0.3);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  margin-top: -15%;
 }
 
-main .swipe-container .swipe-content figure figcaption h2 {
+main .swipe-container .swipe-content figure figcaption h3 {
   margin-left: 0px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+main .swipe-container .swipe-content figure figcaption p {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+main .swipe-container .swipe-content figure figcaption a {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+main .swipe-container .swipe-content.currentSlide figure img {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+main .swipe-container .swipe-content.currentSlide figure figcaption {
+  background: #e4665c;
+}
+
+main .swipe-container .swipe-content.currentSlide figure figcaption h3 {
+  color: white;
+  opacity: 1;
+}
+
+main .swipe-container .swipe-content.currentSlide figure figcaption p {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  color: white;
+}
+
+main .swipe-container .swipe-content.currentSlide figure figcaption a {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  color: white;
+  border-color: white;
 }
 
 main .full-width h2 {
-  margin-left: 10vw;
+  margin-left: 20vw;
 }
 
 @media screen and (min-width: 700px) {
@@ -1386,9 +1460,9 @@ main .full-width h2 {
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: calc(60vw > 1500px)) {
   main .full-width h2 {
-    margin-left: calc((100vw - 1500px)/2);
+    margin-left: calc((60vw - 1500px)/2);
   }
 }
 
@@ -2166,7 +2240,7 @@ main .full-width h2 {
 
 a.CTA {
   background: #e4665c;
-  color: #F3F3F3;
+  color: white;
   font-weight: 500;
   border: none;
   width: -webkit-fit-content;
@@ -2187,10 +2261,16 @@ a.CTA:hover {
 }
 
 .fullview-container {
-  width: 80vw;
+  width: 70vw;
   min-height: calc(100vh - 190px);
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 700px) {
+  .fullview-container {
+    width: 60vw;
+  }
 }
 
 .OneCol {
@@ -2235,7 +2315,7 @@ a.CTA:hover {
 }
 
 .small-width {
-  width: 70vw;
+  width: 60vw;
   max-width: 400px;
 }
 
@@ -2770,6 +2850,7 @@ a.CTA:hover {
   -webkit-transform: translateX(30vw);
           transform: translateX(30vw);
   z-index: -99;
+  opacity: 1;
 }
 
 .slider-buttons {
@@ -2802,15 +2883,42 @@ a.CTA:hover {
 .slider-button p {
   display: block;
   position: absolute;
-  top: -50%;
+  top: -100%;
 }
 
 .button-left.slider-button {
-  left: 10vw;
+  left: 15vw;
+}
+
+.button-left.slider-button::after {
+  content: "<";
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .button-right.slider-button {
-  right: 10vw;
+  right: 15vw;
+}
+
+.button-right.slider-button::after {
+  content: ">";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .slider-button:hover,
@@ -2837,12 +2945,74 @@ a.CTA:hover {
   .swipe-container .swipe-content.prevSlide {
     -webkit-transform: translateX(40vw);
             transform: translateX(40vw);
+    opacity: 0;
   }
   .slider-buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+@media screen and (min-width: 1950px) {
+  .button-left.slider-button {
+    left: calc((100vw - 1500px)/2);
+  }
+  .button-right.slider-button {
+    right: calc((100vw - 1500px)/2);
+  }
+}
+
+.inside-nav {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-left: 50px;
+  z-index: 9999;
+  display: none;
+}
+
+.inside-nav ul {
+  max-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.inside-nav ul .inside-link a {
+  font-size: 0.6em;
+  border: none;
+  font-weight: 300;
+  color: #424f60;
+}
+
+.inside-nav ul .inside-link.active a {
+  font-weight: 600;
+  color: #e4665c;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media screen and (min-width: 700px) {
+  .inside-nav {
+    display: block;
+  }
+}
+
+.transparent {
+  opacity: 0;
 }
 
 /*
