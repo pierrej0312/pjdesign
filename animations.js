@@ -63,9 +63,9 @@ var z = document.getElementsByClassName("inside-link");
 
 var currentTab = 0;
 
-let topTop = document.querySelector('#top').offsetTop - 300;
-let latestWorksTop = document.querySelector('#latestworks').offsetTop - 300;
-let whymeTop = document.querySelector('#whyme').offsetTop - 200;
+let topTop = window.innerHeight*0;
+let latestWorksTop = window.innerHeight*0.5;
+let whymeTop = window.innerHeight*1.4;
 let toplink = document.querySelector('.inside-link[href="#top"]');
 let latestWorkslink = document.querySelector('.inside-link[href="#latestworks"]');
 let whymelinks = document.querySelector('.inside-link[href="#whyme"]');

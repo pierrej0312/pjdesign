@@ -977,7 +977,7 @@ main .home .main-anim .circle-anim {
 
 main .home .main-anim .hero-anim {
   position: absolute;
-  top: 20%;
+  bottom: -27%;
   left: 18%;
   width: 57%;
   height: 100%;
@@ -1463,6 +1463,35 @@ main .full-width h2 {
 @media screen and (min-width: calc(60vw > 1500px)) {
   main .full-width h2 {
     margin-left: calc((60vw - 1500px)/2);
+  }
+}
+
+main #latestworks {
+  margin-bottom: 150px;
+}
+
+@media (min-width: 64em) {
+  main #latestworks {
+    margin-bottom: 150px;
+    line-height: 1.65;
+  }
+}
+
+@media (min-width: 85.375em) {
+  main #latestworks {
+    margin-bottom: 165px;
+  }
+}
+
+@media (min-width: 120em) {
+  main #latestworks {
+    margin-bottom: 180px;
+  }
+}
+
+@media (min-width: 160em) {
+  main #latestworks {
+    margin-bottom: 195px;
   }
 }
 
@@ -2265,6 +2294,7 @@ a.CTA:hover {
   min-height: calc(100vh - 190px);
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 @media screen and (min-width: 700px) {
@@ -2287,7 +2317,7 @@ a.CTA:hover {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-top: 30px;
+  margin-top: 50px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -2399,6 +2429,7 @@ a.CTA:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  position: relative;
 }
 
 @media screen and (min-width: 700px) {
@@ -2860,7 +2891,7 @@ a.CTA:hover {
 
 .slider-button {
   position: absolute;
-  top: calc(50% + 2em + 50px);
+  top: calc(45% + 2em + 50px);
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2996,6 +3027,32 @@ a.CTA:hover {
   border: none;
   font-weight: 300;
   color: #424f60;
+  line-height: 1.5;
+}
+
+@media (min-width: 64em) {
+  .inside-nav ul .inside-link a {
+    font-size: 0.66em;
+    line-height: 1.65;
+  }
+}
+
+@media (min-width: 85.375em) {
+  .inside-nav ul .inside-link a {
+    font-size: 0.72em;
+  }
+}
+
+@media (min-width: 120em) {
+  .inside-nav ul .inside-link a {
+    font-size: 0.78em;
+  }
+}
+
+@media (min-width: 160em) {
+  .inside-nav ul .inside-link a {
+    font-size: 0.84em;
+  }
 }
 
 .inside-nav ul .inside-link.active a {

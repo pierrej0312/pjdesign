@@ -191,7 +191,7 @@ main {
             }
             .hero-anim {
                 position: absolute;
-                top: 20%;
+                bottom: -27%;
                 left: 18%;
                 width: 57%;
                 height: 100%;
@@ -564,6 +564,25 @@ main {
                 margin-left:calc((60vw - 1500px)/2);
             }
         }
+    }
+    #latestworks {
+        margin-bottom: 150px;
+        @media #{$mq-medium} {
+            margin-bottom: 150px*1;
+            line-height: $base-line-height*1.1;
+          }
+        
+          @media #{$mq-large} {
+            margin-bottom: 150px*1.1;
+          }
+        
+          @media #{$mq-xlarge} {
+            margin-bottom: 150px*1.2;
+          }
+        
+          @media #{$mq-xxlarge} {
+            margin-bottom: 150px*1.3;
+          }
     }
     
 }

@@ -7,6 +7,7 @@
     min-height: calc(100vh - 190px);
     margin-left:auto;
     margin-right: auto;
+    position: relative;
 }
 @media screen and (min-width: 700px) {
     .fullview-container {
@@ -19,7 +20,7 @@
     justify-content: flex-start;
     align-items:flex-start;
     //margin-bottom:50px;
-    margin-top: 30px;
+    margin-top: 50px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -86,6 +87,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
 
 }
 @media screen and (min-width: 700px) {
