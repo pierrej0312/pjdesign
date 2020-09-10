@@ -135,7 +135,7 @@ const _C = document.querySelector('.swipe-content'),
             document.querySelector('.swipe-container').style.setProperty('--w', W + "px");
 
             var figcap = x[currentTab].querySelector('figcaption');
-            figcap.style.background = "radial-gradient(256.55% 519.75% at 23.97% -78.29%, #E4665C 0.46%, #424F60 100%)";//figcap.getAttribute('data-color');
+            figcap.style.background = /*"radial-gradient(256.55% 519.75% at 23.97% -78.29%, #E4665C 0.46%, #424F60 100%)";*/figcap.getAttribute('data-color');
             //document.querySelector('.swipe-container').style.setProperty('--tx', '0px');
             //document.querySelector('.swipe-container').setAttribute('style','transform:translateX(calc(' + currentTab + '*(-' + w + 'px)));');
 
