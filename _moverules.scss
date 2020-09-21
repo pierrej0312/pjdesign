@@ -242,12 +242,12 @@ figure {
 }
 select {
     padding:10px 20px;
-    background: $white;
-    border:1px solid $black;
-    border-radius: $borderRadius;
+    background: none;
+    border: none;
     color: $black;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
+    outline: none;
 }
 html {
     scroll-behavior: smooth;

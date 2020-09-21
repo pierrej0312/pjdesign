@@ -1,5 +1,25 @@
 //swipe slider caroussel
 
+.absolute-link {
+    position: absolute;
+    bottom:9%;
+    left: 50%;
+    transform: translateX(-50%) scale(1.1);
+    z-index: 10000;
+    opacity: 0;
+}
+@media screen and (min-width: 700px) {
+    .absolute-link {
+        bottom:16%;
+    }
+}
+.absolute-link:hover,
+.absolute-link:focus {
+    transform: translateX(-50%) scale(1.1);
+}
+.absolute-link:hover ~ .swipe-container .swipe-content figure figcaption a {
+    transform: scale(1.1);
+}
 .swipe-container.smooth {
     transition: transform calc(var(--f, 1)*.5s) ease-out;
 }
@@ -40,10 +60,11 @@
     }
     .swipe-content.nextSlide {
         margin-left: -30vw;
+        transform: scale(0.7);
         z-index: -99;
     }
     .swipe-content.prevSlide {
-        transform: translateX(30vw);
+        transform: translateX(30vw) scale(0.7);
         z-index: -99;
         opacity:1;
     }
@@ -110,10 +131,11 @@
             width: calc(100vw/var(--n));
         }
         .swipe-content.nextSlide {
-            margin-left: -40vw;
+            margin-left: -50vw;
+            transform: scale(0.7);
         }
         .swipe-content.prevSlide {
-            transform: translateX(40vw);
+            transform: translateX(50vw) scale(0.7);
             opacity:0;
         }
     }

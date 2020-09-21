@@ -1,3 +1,185 @@
+//country detect
+/*
+var lang = navigator.language;
+              if (!$.cookie('language-fr-be-redirect-cookie') && lang.indexOf("fr-be") !== -1) {
+              var date = new Date();      
+              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+              $.cookie('language-de-redirect-cookie', true, { expires: date });
+              $(location).attr('href', 'https://www.pjdesign.eu/fr-be/index.html');
+          }
+        	  else if (!$.cookie('language-fr-redirect-cookie') && lang.indexOf("fr") !== -1) {
+              var date = new Date();      
+              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+              $.cookie('language-fr-redirect-cookie', true, { expires: date });
+              $(location).attr('href', 'https://www.pjdesign.eu/fr/index.html');
+          }
+          else if (!$.cookie('language-nl-be-redirect-cookie') && lang.indexOf("nl-be") !== -1) {
+              var date = new Date();      
+              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+              $.cookie('language-fr-redirect-cookie', true, { expires: date });
+              $(location).attr('href', 'https://www.pjdesign.eu/nl-be/index.html');
+          }
+          else if (!$.cookie('language-nl-be-redirect-cookie') && lang.indexOf("nl") !== -1) {
+              var date = new Date();      
+              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+              $.cookie('language-fr-redirect-cookie', true, { expires: date });
+              $(location).attr('href', 'https://www.pjdesign.eu/nl/index.html');
+          }
+       	 else {
+          		// do nothing
+          		}
+*/
+
+//in js
+/*
+(function (factory) {
+	if (typeof define === 'function' && define.amd) {
+		// AMD
+		define(['jquery'], factory);
+	} else if (typeof exports === 'object') {
+		// CommonJS
+		factory(require('jquery'));
+	} else {
+		// Browser globals
+		factory(jQuery);
+	}
+}(function ($) {
+
+	var pluses = /+/g;
+
+	function encode(s) {
+		return config.raw ? s : encodeURIComponent(s);
+	}
+
+	function decode(s) {
+		return config.raw ? s : decodeURIComponent(s);
+	}
+
+	function stringifyCookieValue(value) {
+		return encode(config.json ? JSON.stringify(value) : String(value));
+	}
+
+	function parseCookieValue(s) {
+		if (s.indexOf('"') === 0) {
+			// This is a quoted cookie as according to RFC2068, unescape...
+			s = s.slice(1, -1).replace(/\"/g, '"').replace(/\\/g, '\');
+		}
+
+		try {
+			// Replace server-side written pluses with spaces.
+			// If we can't decode the cookie, ignore it, it's unusable.
+			// If we can't parse the cookie, ignore it, it's unusable.
+			s = decodeURIComponent(s.replace(pluses, ' '));
+			return config.json ? JSON.parse(s) : s;
+		} catch(e) {}
+	}
+
+	function read(s, converter) {
+		var value = config.raw ? s : parseCookieValue(s);
+		return $.isFunction(converter) ? converter(value) : value;
+	}
+
+	var config = $.cookie = function (key, value, options) {
+
+		// Write
+
+		if (value !== undefined && !$.isFunction(value)) {
+			options = $.extend({}, config.defaults, options);
+
+			if (typeof options.expires === 'number') {
+				var days = options.expires, t = options.expires = new Date();
+				t.setTime(+t + days * 864e+5);
+			}
+
+			return (document.cookie = [
+				encode(key), '=', stringifyCookieValue(value),
+				options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+				options.path    ? '; path=' + options.path : '',
+				options.domain  ? '; domain=' + options.domain : '',
+				options.secure  ? '; secure' : ''
+			].join(''));
+		}
+
+		// Read
+
+		var result = key ? undefined : {};
+
+		// To prevent the for loop in the first place assign an empty array
+		// in case there are no cookies at all. Also prevents odd result when
+		// calling $.cookie().
+		var cookies = document.cookie ? document.cookie.split('; ') : [];
+
+		for (var i = 0, l = cookies.length; i < l; i++) {
+			var parts = cookies[i].split('=');
+			var name = decode(parts.shift());
+			var cookie = parts.join('=');
+
+			if (key && key === name) {
+				// If second argument (value) is a function it's a converter...
+				result = read(cookie, value);
+				break;
+			}
+
+			// Prevent storing a cookie that we couldn't decode.
+			if (!key && (cookie = read(cookie)) !== undefined) {
+				result[name] = cookie;
+			}
+		}
+
+		return result;
+	};
+
+	config.defaults = {};
+
+	$.removeCookie = function (key, options) {
+		if ($.cookie(key) === undefined) {
+			return false;
+		}
+
+		// Must not alter options, thus extending a fresh object...
+		$.cookie(key, '', $.extend({}, options, { expires: -1 }));
+		return !$.cookie(key);
+	};
+
+}));
+
+var lang = navigator.language;
+              if (!$.cookie('language-fr-be-redirect-cookie') && lang.indexOf("fr-be") !== -1) {
+              var date = new Date();      
+              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+              $.cookie('language-de-redirect-cookie', true, { expires: date });
+              document.querySelector(location).attr('href', 'https://www.pjdesign.eu/fr-be/index.html');
+          }
+        	  else if (!$.cookie('language-fr-redirect-cookie') && lang.indexOf("fr") !== -1) {
+              var date = new Date();      
+              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+              $.cookie('language-fr-redirect-cookie', true, { expires: date });
+              document.querySelector(location).attr('href', 'https://www.pjdesign.eu/fr/index.html');
+          }
+          else if (!$.cookie('language-nl-be-redirect-cookie') && lang.indexOf("nl-be") !== -1) {
+              var date = new Date();      
+              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+              $.cookie('language-fr-redirect-cookie', true, { expires: date });
+              document.querySelector(location).attr('href', 'https://www.pjdesign.eu/nl-be/index.html');
+          }
+          else if (!$.cookie('language-nl-be-redirect-cookie') && lang.indexOf("nl") !== -1) {
+              var date = new Date();      
+              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+              $.cookie('language-fr-redirect-cookie', true, { expires: date });
+              document.querySelector(location).attr('href', 'https://www.pjdesign.eu/nl/index.html');
+          }
+       	 else {
+          		// do nothing
+                  }
+*/
+
+
+
+
+
+
+
+
 function openMainNav() {
     document.querySelector('.main-nav').classList.add('open');
 }
@@ -34,7 +216,7 @@ window.addEventListener("scroll", ()=> {
     }
 });
 
-let scrollfadetreePanel = window.innerHeight*1.4 + 300;
+let scrollfadetreePanel = window.innerHeight*1.4 + 400;
 
 window.addEventListener("scroll", ()=> {
     
@@ -116,7 +298,7 @@ const _C = document.querySelector('.swipe-content'),
     
     var currentTab = 0;
     showTab(currentTab);
-
+    
       
     function showTab(n) {
         
@@ -135,7 +317,7 @@ const _C = document.querySelector('.swipe-content'),
             document.querySelector('.swipe-container').style.setProperty('--w', W + "px");
 
             var figcap = x[currentTab].querySelector('figcaption');
-            figcap.style.background = /*"radial-gradient(256.55% 519.75% at 23.97% -78.29%, #E4665C 0.46%, #424F60 100%)";*/figcap.getAttribute('data-color');
+            figcap.style.background = "#e4665c";/*"radial-gradient(144.08% 144.08% at 128.66% 110.14%, rgba(165, 198, 240, 0.81) 0%, rgba(255, 255, 255, 0.16) 100%), radial-gradient(86.02% 86.02% at -13.5% 126.41%, #E4665C 0%, #424F60 100%)"*//*"radial-gradient(256.55% 519.75% at 23.97% -78.29%, #E4665C 0.46%, #424F60 100%)";*///figcap.getAttribute('data-color');
             //document.querySelector('.swipe-container').style.setProperty('--tx', '0px');
             //document.querySelector('.swipe-container').setAttribute('style','transform:translateX(calc(' + currentTab + '*(-' + w + 'px)));');
 
@@ -150,8 +332,21 @@ const _C = document.querySelector('.swipe-content'),
 
         if (n == 0) {
             document.querySelector(".button-left.slider-button").style.display = "none";
+            document.querySelector('.absolute-link').setAttribute('href', '/works.html#balabulle');
           } else {
             document.querySelector(".button-left.slider-button").style.display = "flex";
+        }
+        if(n == 1) {
+            document.querySelector('.absolute-link').setAttribute('href', '/works.html#wallcom');
+        }
+        if(n == 2) {
+            document.querySelector('.absolute-link').setAttribute('href', '/works.html#potagio');
+        }
+        if(n == 3) {
+            document.querySelector('.absolute-link').setAttribute('href', '/works.html#chevetogne');
+        }
+        if(n == 4) {
+            document.querySelector('.absolute-link').setAttribute('href', '/index.html#top');
         }
         if (n == (x.length - 3)) {
             document.querySelector(".button-right.slider-button").style.display = "none";
@@ -288,3 +483,8 @@ document.querySelector('.swipe-container').addEventListener('touchmove', e => {e
 document.querySelector('.swipe-container').addEventListener('mousemove', drag, false);
 document.querySelector('.swipe-container').addEventListener('touchmove', drag, false);
 
+//country change
+
+function countryHandler(value) {
+    window.location.assign(`/${value}/index.html`);
+}

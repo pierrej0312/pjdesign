@@ -1,0 +1,28 @@
+.social-media {
+  margin-top:30px;
+  margin-left: 60px;
+  li {
+    margin-right:30px;
+    margin-bottom: 30px;
+  }
+  .social-link:focus,
+  .social-link:hover {
+  background-color: #e4665c;
+  color: white;
+  border-radius: 100%;
+  box-shadow: 3px 4px 14px #e4665c;
+  border: none;
+  }
+  .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms 300ms;
+  height: 50px;
+  width: 50px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  }
+}

@@ -49,6 +49,12 @@
 .OneCol.left {
     margin-right: 0px;
 }
+.row-spacebet {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 .col-reverse-to-row-desk {
     
     display:flex;
@@ -115,4 +121,9 @@
     .OneCol.left {
         margin-right: 200px;
     }
+}
+.row-wrap-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
