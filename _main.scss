@@ -232,7 +232,13 @@ main {
         }
         @media screen and (min-width: 700px) {
             .main-anim.loading {
-                transform: translateX(-75%) scale(0.5);
+                transform: translateX(-75%) scale(0);
+                animation-name: mainAnimLoad;
+                animation-duration: 0.3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-delay: 0s;
+                animation-timing-function: cubic-bezier(1,1.59,.61,.74);
             }
         }
         
@@ -512,7 +518,12 @@ main {
         .swipe-content.currentSlide {
             figure {
                 img {
-                    transform: translateY(0px);
+                    transform: translateY(10px);
+                }
+                @media screen and (min-width:700px) {
+                    img {
+                        transform: translateY(-30px);
+                    }
                 }
                 figcaption {
                     background: $CTA-color;

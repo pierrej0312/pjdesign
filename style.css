@@ -1024,8 +1024,20 @@ main .home .main-anim .hero-anim {
 
 @media screen and (min-width: 700px) {
   main .home .main-anim.loading {
-    -webkit-transform: translateX(-75%) scale(0.5);
-            transform: translateX(-75%) scale(0.5);
+    -webkit-transform: translateX(-75%) scale(0);
+            transform: translateX(-75%) scale(0);
+    -webkit-animation-name: mainAnimLoad;
+            animation-name: mainAnimLoad;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-timing-function: cubic-bezier(1, 1.59, 0.61, 0.74);
+            animation-timing-function: cubic-bezier(1, 1.59, 0.61, 0.74);
   }
 }
 
@@ -1416,8 +1428,15 @@ main .swipe-container .swipe-content figure figcaption a {
 }
 
 main .swipe-container .swipe-content.currentSlide figure img {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+@media screen and (min-width: 700px) {
+  main .swipe-container .swipe-content.currentSlide figure img {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
 }
 
 main .swipe-container .swipe-content.currentSlide figure figcaption {
@@ -1576,6 +1595,15 @@ a.CTA:hover {
   max-width: 400px;
 }
 
+@media screen and (min-width: 700px) {
+  .small-width.margin-left {
+    margin-left: 30vw;
+  }
+  .small-width.margin-right {
+    margin-right: 30vw;
+  }
+}
+
 .mid-width {
   max-width: 600px;
 }
@@ -1673,6 +1701,14 @@ a.CTA:hover {
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: relative;
+}
+
+.margin-bottom {
+  margin-bottom: 100px;
+}
+
+.margin-top {
+  margin-top: 400px;
 }
 
 @media screen and (min-width: 700px) {
@@ -2075,7 +2111,7 @@ a.CTA:hover {
 
 .absolute-link {
   position: absolute;
-  bottom: 9%;
+  bottom: 13%;
   left: 50%;
   -webkit-transform: translateX(-50%) scale(1.1);
           transform: translateX(-50%) scale(1.1);
@@ -2085,7 +2121,7 @@ a.CTA:hover {
 
 @media screen and (min-width: 700px) {
   .absolute-link {
-    bottom: 16%;
+    bottom: 21%;
   }
 }
 
@@ -2123,6 +2159,7 @@ a.CTA:hover {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   width: 500vw;
+  height: 600px;
   margin-top: 50px;
 }
 
@@ -2147,11 +2184,13 @@ a.CTA:hover {
   z-index: 1;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .swipe-container .swipe-content.currentSlide {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .swipe-container .swipe-content.nextSlide {
@@ -2202,7 +2241,7 @@ a.CTA:hover {
 }
 
 .button-left.slider-button {
-  left: 15vw;
+  left: 20vw;
 }
 
 .button-left.slider-button::after {
@@ -2220,7 +2259,7 @@ a.CTA:hover {
 }
 
 .button-right.slider-button {
-  right: 15vw;
+  right: 20vw;
 }
 
 .button-right.slider-button::after {
@@ -2245,6 +2284,7 @@ a.CTA:hover {
 @media screen and (min-width: 700px) {
   .swipe-container {
     width: 500vw;
+    height: 700px;
   }
   .swipe-container .swipe-content {
     min-width: 100vw;
@@ -2273,10 +2313,10 @@ a.CTA:hover {
 
 @media screen and (min-width: 1950px) {
   .button-left.slider-button {
-    left: calc((100vw - 1500px)/2);
+    left: calc((110vw - 1500px)/2);
   }
   .button-right.slider-button {
-    right: calc((100vw - 1500px)/2);
+    right: calc((110vw - 1500px)/2);
   }
 }
 
@@ -2576,6 +2616,17 @@ footer .legals li a {
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  z-index: -99;
 }
 
 @-webkit-keyframes UpComing {
@@ -3347,6 +3398,28 @@ footer .legals li a {
     width: 0%;
     -webkit-transform: rotate(-228deg) scaleX(0);
             transform: rotate(-228deg) scaleX(0);
+  }
+}
+
+@-webkit-keyframes mainAnimLoad {
+  0% {
+    -webkit-transform: translateX(-75%) scale(0);
+            transform: translateX(-75%) scale(0);
+  }
+  100% {
+    -webkit-transform: translateX(-75%) scale(0.5);
+            transform: translateX(-75%) scale(0.5);
+  }
+}
+
+@keyframes mainAnimLoad {
+  0% {
+    -webkit-transform: translateX(-75%) scale(0);
+            transform: translateX(-75%) scale(0);
+  }
+  100% {
+    -webkit-transform: translateX(-75%) scale(0.5);
+            transform: translateX(-75%) scale(0.5);
   }
 }
 

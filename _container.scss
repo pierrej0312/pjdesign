@@ -43,6 +43,14 @@
     width:60vw;
     max-width: 400px;
 }
+@media screen and (min-width:700px) {
+    .small-width.margin-left {
+        margin-left: 30vw;
+    }
+    .small-width.margin-right {
+        margin-right: 30vw;
+    }
+}
 .mid-width {
     max-width: 600px;
 }
@@ -95,6 +103,12 @@
     justify-content: flex-start;
     position: relative;
 
+}
+.margin-bottom {
+    margin-bottom: 100px;
+}
+.margin-top {
+    margin-top: 400px;
 }
 @media screen and (min-width: 700px) {
     .col-reverse-to-row-desk {

@@ -2,7 +2,7 @@
 
 .absolute-link {
     position: absolute;
-    bottom:9%;
+    bottom:13%;
     left: 50%;
     transform: translateX(-50%) scale(1.1);
     z-index: 10000;
@@ -10,7 +10,7 @@
 }
 @media screen and (min-width: 700px) {
     .absolute-link {
-        bottom:16%;
+        bottom:21%;
     }
 }
 .absolute-link:hover,
@@ -34,6 +34,7 @@
     //document.querySelector('.swipe-container').setAttribute('style','transform:translateX(calc(' + currentTab + '*(-' + w + 'px)));');
     transition: all 300ms ease-in-out;
     width: 500vw;
+    height:600px;
     margin-top:50px;
     //transform: translate(calc(var(--i)/var(--n)*-60vw));
 
@@ -54,9 +55,10 @@
         pointer-events: none;
         z-index: 1;
         transition: all 300ms ease-in-out;
+        transform: scale(0.8);
     }
     .swipe-content.currentSlide {
-        transform: scale(1.1);
+        transform: scale(1);
     }
     .swipe-content.nextSlide {
         margin-left: -30vw;
@@ -93,7 +95,7 @@
     }
 }
 .button-left.slider-button {
-    left:15vw;
+    left:20vw;
     &::after {
         content:"<";
         display: block;
@@ -103,7 +105,7 @@
     }
 }
 .button-right.slider-button {
-    right:15vw;
+    right:20vw;
     &::after {
         content:">";
         display: flex;
@@ -120,6 +122,7 @@
         //width: calc(var(--n)*100vw);
         //transform: translate(calc(var(--i)/var(--n)*-100vw));
         width: 500vw;
+        height:700px;
         
     
         .swipe-content {
@@ -145,9 +148,9 @@
 }
 @media screen and (min-width: 1950px) {
     .button-left.slider-button {
-        left: calc((100vw - 1500px)/2);
+        left: calc((110vw - 1500px)/2);
     }
     .button-right.slider-button {
-        right: calc((100vw - 1500px)/2);
+        right: calc((110vw - 1500px)/2);
     }
 }

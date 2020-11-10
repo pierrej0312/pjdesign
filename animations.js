@@ -1,34 +1,4 @@
 //country detect
-/*
-var lang = navigator.language;
-              if (!$.cookie('language-fr-be-redirect-cookie') && lang.indexOf("fr-be") !== -1) {
-              var date = new Date();      
-              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
-              $.cookie('language-de-redirect-cookie', true, { expires: date });
-              $(location).attr('href', 'https://www.pjdesign.eu/fr-be/index.html');
-          }
-        	  else if (!$.cookie('language-fr-redirect-cookie') && lang.indexOf("fr") !== -1) {
-              var date = new Date();      
-              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
-              $.cookie('language-fr-redirect-cookie', true, { expires: date });
-              $(location).attr('href', 'https://www.pjdesign.eu/fr/index.html');
-          }
-          else if (!$.cookie('language-nl-be-redirect-cookie') && lang.indexOf("nl-be") !== -1) {
-              var date = new Date();      
-              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
-              $.cookie('language-fr-redirect-cookie', true, { expires: date });
-              $(location).attr('href', 'https://www.pjdesign.eu/nl-be/index.html');
-          }
-          else if (!$.cookie('language-nl-be-redirect-cookie') && lang.indexOf("nl") !== -1) {
-              var date = new Date();      
-              date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
-              $.cookie('language-fr-redirect-cookie', true, { expires: date });
-              $(location).attr('href', 'https://www.pjdesign.eu/nl/index.html');
-          }
-       	 else {
-          		// do nothing
-          		}
-*/
 
 //in js
 /*
@@ -205,7 +175,7 @@ window.addEventListener("scroll", ()=> {
         document.querySelector(".scrollfadeone.fade-down").classList.add("start");
     }
 });
-let scrollfadetwoPanel = window.innerHeight*1.4;
+let scrollfadetwoPanel = window.innerHeight*1.6;
 
 window.addEventListener("scroll", ()=> {
     
@@ -213,10 +183,11 @@ window.addEventListener("scroll", ()=> {
         document.querySelector(".scrollfadetwo.fade-shoot-left").classList.add("start");
         document.querySelector(".scrollfadetwo.fade-left").classList.add("start");
         document.querySelector(".scrollfadetwo.fade-down").classList.add("start");
+        document.querySelector(".scrollfadetwo.fade-right").classList.add("start");
     }
 });
 
-let scrollfadetreePanel = window.innerHeight*1.4 + 400;
+let scrollfadetreePanel = window.innerHeight*1.6 + 400;
 
 window.addEventListener("scroll", ()=> {
     

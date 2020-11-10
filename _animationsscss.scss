@@ -303,3 +303,12 @@
             transform: rotate(-228deg) scaleX(0);
     }
 }
+
+@keyframes mainAnimLoad {
+  0% {
+    transform: translateX(-75%) scale(0);
+  }
+  100% {
+    transform: translateX(-75%) scale(0.5);
+  }
+}
