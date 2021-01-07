@@ -1,0 +1,73 @@
+.swipe-container {
+    transition: all 300ms ease-in-out;
+    .swipe-content {
+        transition: all 300ms ease-in-out;
+        figure {
+            width:100vw;
+            height: 100vh;
+            //background: radial-gradient(199.94% 199.94% at 147.52% -99.94%, #424F60 0%, #A5C6F0 100%);
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-start;
+            position: relative;
+            transition: all 300ms ease-in-out;
+            overflow:hidden;
+            img {
+                display:none;
+            }
+            figcaption {
+                width:calc(40% - 100px);
+                right:0;
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: flex-start;
+                padding: 100px;
+                //box-shadow: 10px 10px 20px rgba($color: $black, $alpha: 0.3);
+                transition: all 300ms ease-in-out;
+                margin-top:250px;
+                top:0;
+                h3 {
+                    opacity: 0;
+                    transform: translateY(100px);
+                    margin-left: 0px;
+                    transition: all 500ms ease-in-out;
+                }
+                p {
+                    opacity: 0;
+                    transform: translateY(100px);
+                    transition: all 600ms ease-in-out;
+                    
+                }
+                a {
+                    opacity: 0;
+                    transform: translateY(100px);
+                    transition: all 800ms ease-in-out;
+                }
+            }
+        }
+    }
+    .swipe-content.currentSlide {
+        figure {
+            figcaption {
+                h3 {
+                    opacity: 1;
+                    transform: translateY(0px);
+                    transition: all 500ms ease-in-out;
+                }
+                p {
+                    opacity: 1;
+                    transform: translateY(0px);
+                    transition: all 600ms ease-in-out;
+                    
+                }
+                a {
+                    opacity: 1;
+                    transform: translateY(0px);
+                    transition: all 800ms ease-in-out;
+                }
+            }
+        }
+    }
+}

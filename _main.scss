@@ -463,110 +463,13 @@ main {
             max-height: 300px;
         }
     }
-    .swipe-container {
-        .swipe-content {
-            figure {
-                width:100%;
-                height: 100%;
-                //background: radial-gradient(199.94% 199.94% at 147.52% -99.94%, #424F60 0%, #A5C6F0 100%);
-                display: flex;
-                flex-direction: column;
-                justify-items: center;
-                align-items: center;
-                position: relative;
-                img {
-                    width: 90%;
-                    height: 50%;
-                    display: block;
-                    object-fit: contain;
-                    object-position: center;
-                    transform: translateY(50px);
-                    transition: all 300ms ease-in-out;
-                }
-                figcaption {
-                    width:calc(80% - 100px);
-                    top:60%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-items: center;
-                    align-items: center;
-                    padding: 50px;
-                    padding-top: calc(50px + 5%);
-                    border-radius: 70px;
-                    background: $white;
-                    box-shadow: 10px 10px 20px rgba($color: $black, $alpha: 0.3);
-                    transition: all 300ms ease-in-out;
-                    margin-top: -15%;
-                    h3 {
-                        margin-left: 0px;
-                        transition: all 500ms ease-in-out;
-                    }
-                    p {
-                        opacity: 0;
-                        transform: translateY(100px);
-                        transition: all 600ms ease-in-out;
-                        
-                    }
-                    a {
-                        opacity: 0;
-                        transform: translateY(100px);
-                        transition: all 800ms ease-in-out;
-                    }
-                }
-            }
-        }
-        .swipe-content.currentSlide {
-            figure {
-                img {
-                    transform: translateY(10px);
-                }
-                @media screen and (min-width:700px) {
-                    img {
-                        transform: translateY(-30px);
-                    }
-                }
-                figcaption {
-                    background: $CTA-color;
-                    //box-shadow: 0px 0px 30px #E4665C;
-                    h3 {
-                        color: white;
-                        opacity: 1;
-                    }
-                    p {
-                        opacity: 1;
-                        transform: translateY(0px);
-                        color: white;
-                    }
-                    a {
-                        opacity: 1;
-                        transform: translateY(0px);
-                        color: white;
-                        border-color: white;
-                    }
-                }
-            }
-        }
-    }
+    
     .full-width {
         h2 {
             margin-left:20vw;
         }
     }
-    @media screen and (min-width: 700px) {
-        .swipe-container {
-            .swipe-content {
-                figure {
-                    width: 60vw;
-                    max-width: 800px;
-                    height: 100%;
 
-                    figcaption {
-                        width:calc(80% - 100px);
-                    }
-                }
-            }
-        }
-    }
     
     @media screen and (min-width: calc(60vw > 1500px)) {
         .full-width {
@@ -576,7 +479,27 @@ main {
         }
     }
     #latestworks {
-        margin-bottom: 150px;
+        margin-bottom: 50px;
+        background:white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: all 300ms ease-in-out;
+        overflow: hidden;
+        z-index: 99;
+        padding-bottom: 0;
+
+        .title.absolute {
+            position: absolute;
+            left: 0;
+            top: 150px;
+            @media screen and (max-width:700px) {
+                margin-left: 10vw;
+                top: 30px;
+            }
+        }
+
         @media #{$mq-medium} {
             margin-bottom: 150px*1;
             line-height: $base-line-height*1.1;

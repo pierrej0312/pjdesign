@@ -1,0 +1,55 @@
+{"feed":[
+    {
+        "title":"Balabulle",
+        "title2":"Website",
+        "img":"/img/latestworks/balabulle/large/balabulle.png",
+        "img-mobile":"/img/latestworks/balabulle/small/balabulle.png",
+        "text_img":"balabulle website view",
+        "url":"https://www.pjdesign.be/balabulle",
+        "ss_titre":"Purchase or rental of cups",
+        "class":"big-img",
+        "background":"",
+        "color":"",
+        "texte":"That was a project where I had to work about the branding and the website."
+    },
+
+    {
+        "title":"Wallcom",
+        "title2":"Website",
+        "img":"/img/latestworks/wallcom/large/wallcom.png",
+        "img-mobile":"/img/latestworks/wallcom/small/wallcom.png",
+        "text_img":"Wallcom website view",
+        "url":"https://vigilant-mestorf-41b7d4.netlify.app/",
+        "ss_titre":"Communication agency",
+        "class":"big-img",
+        "background":"",
+        "texte":"An interesting work where they let me carte blanche to do a creative website."
+    },
+    
+    {
+        "title":"Potagio",
+        "title2":"Mobile app",
+        "img":"/img/latestworks/potagio/potagio.gif",
+        "img-mobile":"/img/latestworks/potagio/potagio.gif",
+        "text_img":"Potagio App view",
+        "url":"",
+        "ss_titre":"Ux Ui 2020 contest",
+        "class":"small-img",
+        "background":"",
+        "texte":"This is my project during the HACKATHON Ux Ui 2020 contest that won me a prize."
+    },
+    
+    {
+        "title":"Chevetogne",
+        "title2":"Mobile App",
+        "img":"/img/latestworks/chevetogne/chevetogne.gif",
+        "img-mobile":"/img/latestworks/chevetogne/chevetogne.gif",
+        "text_img":"Chevetogne App view",
+        "url":"",
+        "ss_titre":"App to help visitors for informations locations and discovering",
+        "class":"small-img",
+        "background":"",
+        "texte":"As a ScrumMaster I led team for the design and the technology directions."
+    }],
+    
+"number":13,"title":"Kazan","baseline":"Smart City"}

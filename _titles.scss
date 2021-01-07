@@ -1,4 +1,27 @@
 // titles
+.very-big-title{
+    text-transform: uppercase;
+    //font-size responsive
+    font-size: $title-font-big-size;
+    line-height: $base-line-height;
+    @media #{$mq-medium} {
+        font-size: $title-font-big-size*1.1;
+        line-height: $base-line-height*1.1;
+    }
+
+    @media #{$mq-large} {
+        font-size: $title-font-big-size*1.2;
+    }
+
+     @media #{$mq-xlarge} {
+        font-size: $title-font-big-size*1.3;
+    }
+
+    @media #{$mq-xxlarge} {
+        font-size: $title-font-big-size*1.4;
+    }
+margin-bottom: 50px;
+}
 .big-title {
     text-transform: uppercase;
     //font-size responsive

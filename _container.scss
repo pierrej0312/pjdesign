@@ -25,6 +25,12 @@
     margin-left: auto;
     margin-right: auto;
 }
+.OneCol.centerFullView {
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 100vw;
+}
 .OneCol.marginless {
     margin-bottom:0;
     margin-top: 0;
@@ -97,11 +103,13 @@
 .full-width {
     width: 100vw;
     max-width: none;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
+    padding-bottom:200px;
 
 }
 .margin-bottom {

@@ -54,3 +54,23 @@
         display: block;
     }
 }
+.inside-nav.white {
+    ul {
+        .inside-link {
+            a {
+                color: white;
+                @media screen and (max-width:1500px) {
+                    color: black;
+                }
+            }
+        }
+        .inside-link.active {
+            a {
+                color: white;
+                @media screen and (max-width:1500px) {
+                    color: black;
+                }
+            }
+        }
+    }
+}
