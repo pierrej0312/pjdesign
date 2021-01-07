@@ -2557,7 +2557,7 @@ main .latestworksList .latestwork img {
 @media screen and (max-width: 700px) {
   main .latestworksList .latestwork img {
     width: auto;
-    height: 20%;
+    height: 15%;
     margin-bottom: 50px;
     margin-right: auto;
     margin-left: auto;
@@ -2577,8 +2577,8 @@ main .latestworksList .latestwork.small-img img {
 @media screen and (max-width: 700px) {
   main .latestworksList .latestwork.small-img img {
     width: 25vw;
-    -webkit-transform: translateY(-15vh) translateX(0vw) scale(1.5);
-            transform: translateY(-15vh) translateX(0vw) scale(1.5);
+    -webkit-transform: translateY(-10vh) translateX(0vw) scale(1);
+            transform: translateY(-10vh) translateX(0vw) scale(1);
   }
 }
 

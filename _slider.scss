@@ -113,7 +113,7 @@ main {
             margin-right: 100px;
             @media screen and (max-width:700px) {
                 width: auto;
-                height: 20%;
+                height: 15%;
                 margin-bottom:50px;
                 margin-right: auto;
                 margin-left: auto;
@@ -129,7 +129,7 @@ main {
             object-fit: contain;
             @media screen and (max-width:700px) {
                 width: 25vw;
-                transform: translateY(-15vh) translateX(0vw) scale(1.5);
+                transform: translateY(-10vh) translateX(0vw) scale(1);
             }
         }
         @media screen and (max-width:700px) {
