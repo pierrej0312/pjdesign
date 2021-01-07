@@ -657,6 +657,72 @@ function toscrollwhyme() {
     document.documentElement.scrollTop = whymeTop
 };
 
+//open & close Work
+
+function openWorkBalabulle() {
+    var balabulle = document.querySelector(".Work.balabulle");
+        balabulle.classList.add("open"); 
+        document.querySelector("main").classList.add("hide"); 
+        document.querySelector("header").classList.add("scrolled");
+        document.querySelector(".inside-nav").classList.add("hide");
+        document.documentElement.scrollTop = 0;
+}
+function closeWorkBalabulle() {
+    var balabulle = document.querySelector(".Work.balabulle.open");
+        balabulle.classList.remove("open"); 
+        document.querySelector("main").classList.remove("hide"); 
+        document.querySelector("header").classList.remove("scrolled");
+        document.querySelector(".inside-nav").classList.remove("hide");
+        document.documentElement.scrollTop = window.innerHeight;
+}
+function openWorkWallcom() {
+    var balabulle = document.querySelector(".Work.wallcom");
+        balabulle.classList.add("open"); 
+        document.querySelector("main").classList.add("hide"); 
+        document.querySelector("header").classList.add("scrolled");
+        document.querySelector(".inside-nav").classList.add("hide");
+        document.documentElement.scrollTop = 0;
+}
+function closeWorkWallcom() {
+    var balabulle = document.querySelector(".Work.wallcom.open");
+        balabulle.classList.remove("open"); 
+        document.querySelector("main").classList.remove("hide"); 
+        document.querySelector("header").classList.remove("scrolled");
+        document.querySelector(".inside-nav").classList.remove("hide");
+        document.documentElement.scrollTop = window.innerHeight;
+}
+function openWorkPotagio() {
+    var balabulle = document.querySelector(".Work.potagio");
+        balabulle.classList.add("open"); 
+        document.querySelector("main").classList.add("hide"); 
+        document.querySelector("header").classList.add("scrolled");
+        document.querySelector(".inside-nav").classList.add("hide");
+        document.documentElement.scrollTop = 0;
+}
+function closeWorkPotagio() {
+    var balabulle = document.querySelector(".Work.potagio.open");
+        balabulle.classList.remove("open"); 
+        document.querySelector("main").classList.remove("hide"); 
+        document.querySelector("header").classList.remove("scrolled");
+        document.querySelector(".inside-nav").classList.remove("hide");
+        document.documentElement.scrollTop = window.innerHeight;
+}
+function openWorkChevetogne() {
+    var balabulle = document.querySelector(".Work.chevetogne");
+        balabulle.classList.add("open");
+        document.querySelector("main").classList.add("hide"); 
+        document.querySelector("header").classList.add("scrolled");
+        document.querySelector(".inside-nav").classList.add("hide");
+        document.documentElement.scrollTop = 0;
+}
+function closeWorkChevetogne() {
+    var balabulle = document.querySelector(".Work.chevetogne.open");
+        balabulle.classList.remove("open"); 
+        document.querySelector("main").classList.remove("hide"); 
+        document.querySelector("header").classList.remove("scrolled");
+        document.querySelector(".inside-nav").classList.remove("hide");
+        document.documentElement.scrollTop = window.innerHeight;
+}
 
 /*
 //latest work swipe API

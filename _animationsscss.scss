@@ -10,7 +10,7 @@
 }
 @keyframes downComing {
     0% {
-        transform: translateY(70px); //translateY to 0
+        transform: translateY(100px); //translateY to 0
         opacity: 0; // to opacity 1
     }
     100% {
@@ -506,4 +506,11 @@
     transform: translate(-50%, -50%);
                     opacity: 1;
   }
+}
+@keyframes clippathwork {
+  0% {
+    clip-path: circle(0px at 50% 100vh);
+  }
+  90% {clip-path: circle(100% at 50% 100vh);}
+  100% {clip-path:none;}
 }

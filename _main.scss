@@ -1,6 +1,10 @@
+main.hide {
+    display: none;
+}
 main {
     margin-top: 120px;
     position: relative;
+    display: inherit;
 
     .home {
         .main-descr {

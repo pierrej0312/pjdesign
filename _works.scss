@@ -1,0 +1,285 @@
+.Work {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    background: $white;
+    clip-path: circle(0px at 50% 100%);
+    display: none;
+    z-index: 8010;
+
+    .header {
+        width: 100vw;
+        height: calc(100vh - 100px);
+        padding-top:100px;
+        max-width: 100vw;
+
+        .content {
+            margin-left: 100px;
+            animation-delay: 1s;
+            animation-duration: 0.3s;
+            @media screen and (max-width:700px) {
+                margin-left:0;
+                margin-top: 70px;
+            }
+        }
+        .logo {
+            color: rgba(0,0,0,0);
+            width: 100%;
+            height: 120px;
+            @media screen and (max-width:700px) {
+                width: 200px;
+                height: 70px;
+            }
+        }
+        .logo.balabulle {
+            background: url(/img/latestworks/balabulle/logo.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .logo.wallcom {
+            background: url(/img/latestworks/wallcom/logo.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .logo.potagio {
+            height: 70px;
+            margin-bottom:20px;
+            background: url(/img/latestworks/potagio/logo.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .logo.chevetogne {
+            background: url(/img/latestworks/chevetogne/logo.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    .screens {
+        background: linear-gradient(182.7deg, #000000 18%, rgba(0, 0, 0, 0) 18%);
+        background-repeat:no-repeat;
+    }
+    h3 {
+        margin-bottom: 20px;
+    }
+    .OneCol {
+        margin-top: 0;
+    }
+    .goals {
+        margin-top: 50px;
+    }
+    .grid-container.threecol {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        @media screen and (max-width: 930px){
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 700px){
+            grid-template-columns: 1fr;
+        }
+        li {
+            justify-self: center;
+        }
+    }
+    .grid-container.twoCol {
+        div {
+            justify-self: center;
+        }
+        li {
+            width: 50vw;
+            height: 300px;
+            overflow: hidden;
+        }
+    }
+    .flex-wrap {
+        position: relative;
+        .full-width {
+            padding-bottom: 0;
+        }
+        .oneCol {
+            width: 50%;
+            @media screen and (max-width: 700px) {
+                width: 100%;
+            }
+        }
+        &>* {
+            margin-bottom: 100px;
+        }
+    }
+    .img-box.twoCol {
+        grid-column: 1  / span 2; 
+    }
+    .grid-container {
+        display: grid;
+        width: 80vw;
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flex-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1500px;
+    }
+}
+.Work.balabulle {
+display: none;
+    .header {
+        background: radial-gradient(130.17% 142.57% at -30.17% -11.65%, #336099 0%, #50B0A2 100%);
+        background-size: cover;
+    }
+}
+.Work.wallcom {
+    display: none;
+    .header {
+        background: radial-gradient(55.92% 91.76% at 95.67% 118.67%, #E58830 0%, #D35C50 100%);
+        background-size: cover;
+    }
+}
+.Work.potagio {
+    display: none;
+    .header {
+        background: #F3DEBF;
+        background-size: cover;
+
+        .content {
+            margin-top: 50px;
+        }
+    }
+}
+.Work.chevetogne {
+    .header {
+        background-color: #DFFEAE;
+        background-size: cover;
+    }
+    .screens {
+        background: linear-gradient(182.7deg, #DFFEAE 26%, rgba(223, 254, 174, 0) 26%), linear-gradient(4.15deg, #DFFEAE 26.01%, rgba(223, 254, 174, 0) 26.01%);
+        &::before {
+            background: #DFFEAE;
+        }
+    }
+    
+}
+.mask-work {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background:$white;
+    clip-path: circle(0px at 50% 100%);
+    display: none;
+    z-index: 8000;
+}
+.sizeup {
+    transform: scale(1.3);
+    @media screen and (max-width: 700px) {
+        transform: scale(1);
+    }
+}
+
+.absolute-desk {
+    position: static;
+    margin-left: 0;
+    @media screen and (min-width: 700px) {
+        position: absolute;
+        left: 60vw;
+        transform: translateY(-300px);
+    }
+}
+.mockup {
+    border:6px solid white;
+    border-radius: 15px;
+    filter: drop-shadow(-10px 10px 100px rgba(0, 0, 0, 0.25));
+}
+.main-screen {
+    width: 40vw;
+    height: auto;
+    animation-delay: 0.9s;
+    @media screen and (max-width:700px) {
+        width: 60vw;
+    }
+}
+.main-screen.mobile {
+    width: auto;
+    height: 60vh;
+    @media screen and (max-width:700px) {
+        height: 40vh;
+    }
+}
+.mobile-screen {
+    width: 200px;
+    margin-top: 50px;
+    margin-left: 50px;
+    @media screen and (max-width: 700px) {
+        width: 60vw;
+        margin-left: 0px;
+    }
+}
+.closeWork {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 150px;
+    left: 10vw;
+    border-radius: 100%;
+    outline: none;
+    transition: all 300ms ease-in-out;
+
+    @media screen and (max-width:700px) {
+        left:10px;
+        top: 100px;
+    }
+
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        transform-origin: center center;
+        background: $black;
+        border-radius: 5px;
+        top: 50%;
+        left: 50%;
+    }
+    &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+}
+.closeWork:hover,
+.closeWork:focus {
+    transform: scale(1.2);
+}
+.Work.open {
+    clip-path: circle(0px at 50% 100vh);
+    display: block;
+    animation-name: clippathwork;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 0.6s;
+            animation-timing-function: ease-in-out;
+
+    & ~ .mask-work {
+        clip-path: circle(0px at 50% 100vh);
+        display: block;
+        animation-name: clippathwork;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+            animation-timing-function: ease-in-out;
+    }
+}

@@ -4,7 +4,7 @@
     left:0;
     transform: translateY(-50%);
     padding-left:50px;
-    z-index: 9999;
+    z-index: 7999;
     display: none;
 
     ul {
@@ -54,6 +54,7 @@
         display: block;
     }
 }
+.inside-nav.hide {display: none;}
 .inside-nav.white {
     ul {
         .inside-link {

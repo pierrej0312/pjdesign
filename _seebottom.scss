@@ -1,0 +1,32 @@
+.lookBottom {
+    border:none;
+    display: flex;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &::after,
+    &::before {
+        content:'';
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: $black;
+        border-radius: 7px;
+        position: absolute;
+    }
+    &::after {
+        transform-origin: center left;
+        transform: rotate(-45deg) translate(0px, 0px);
+        bottom:50%;
+        left:50%;
+    }
+    &::before {
+        transform-origin: center right;
+        transform: rotate(45deg) translate(0px, 0px);
+        bottom:50%;
+        right:50%;
+    }
+}

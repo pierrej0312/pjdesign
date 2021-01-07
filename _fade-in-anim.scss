@@ -52,6 +52,11 @@
             animation-delay: 0s;
             animation-timing-function: linear, cubic-bezier(1,1.59,.61,.74);
 }
+.fade-spinner {
+        display: block;
+        transform-origin: center center;
+        transform: scale(0.1) rotate(-365deg);
+}
 .fade-up.start {
     transform: translateY(-100px);
             opacity: 0;
@@ -63,11 +68,11 @@
             animation-timing-function: ease-in-out;
 }
 .fade-down {
-    transform: translateY(300px);
+    transform: translateY(100px);
             opacity: 0;
 }
 .fade-down.start {
-    transform: translateY(300px);
+    transform: translateY(100px);
             opacity: 0;
     animation-name: downComing;
             animation-duration: 0.3s;
