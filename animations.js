@@ -393,12 +393,23 @@ function drag(e) {
     //targ = targ.parentNode;
 
   if(locked) {
-    x[currentTab + 1].style.setProperty('clip-path', `polygon(0% 0%, 1% 0%,${Math.round((((unify(e).clientX - x0) / screen.width)*50)+10)}% 69%, ${Math.round((((unify(e).clientX - x0) / screen.width)*70)+13)}% 73%, ${Math.round((((unify(e).clientX - x0) / screen.width)*80)+16)}% 76%, ${Math.round((((unify(e).clientX - x0) / screen.width)*90)+18)}% 78%, ${Math.round((((unify(e).clientX - x0) / screen.width)*100)+18)}% 80%, ${Math.round((((unify(e).clientX - x0) / screen.width)*90)+18)}% 82%, ${Math.round((((unify(e).clientX - x0) / screen.width)*80)+16)}% 84%, ${Math.round((((unify(e).clientX - x0) / screen.width)*70)+13)}% 87%, ${Math.round((((unify(e).clientX - x0) / screen.width)*50)+10)}% 91%, 5% 100%, 0% 100%`);
+      if (currentTab < x.length) {
+        x[currentTab + 1].style.setProperty('clip-path', `polygon(0% 0%, 1% 0%,${Math.round((((unify(e).clientX - x0) / screen.width)*50)+10)}% 69%, ${Math.round((((unify(e).clientX - x0) / screen.width)*70)+13)}% 73%, ${Math.round((((unify(e).clientX - x0) / screen.width)*80)+16)}% 76%, ${Math.round((((unify(e).clientX - x0) / screen.width)*90)+18)}% 78%, ${Math.round((((unify(e).clientX - x0) / screen.width)*100)+18)}% 80%, ${Math.round((((unify(e).clientX - x0) / screen.width)*90)+18)}% 82%, ${Math.round((((unify(e).clientX - x0) / screen.width)*80)+16)}% 84%, ${Math.round((((unify(e).clientX - x0) / screen.width)*70)+13)}% 87%, ${Math.round((((unify(e).clientX - x0) / screen.width)*50)+10)}% 91%, 5% 100%, 0% 100%`);
     //clip-path: polygon(0% 0%, 1% 0%, 10% 69%, 13% 73%, 16% 76%, 18% 78%, 18% 80%, 18% 82%, 16% 84%, 13% 87%, 10% 91%, 5% 100%, 0% 100%);
     //clip-path: polygon(0% 0%, 1% 0%, 34% 69%, 46% 73%, 54% 76%, 60% 78%, 65% 80%, 60% 82%, 54% 84%, 46% 87%, 34% 91%, 5% 100%, 0% 100%);
     x[currentTab + 1].querySelector('.next').style.setProperty('--tx', `${Math.round(unify(e).clientX - x0)}px`);
     //document.querySelectorAll('.swipe-content').setAttribute('style','transform:translateX(calc(' + Math.round(unify(e).clientX - x0) + 'px));');
     //_C.style.setProperty('--tx', `${Math.round(unify(e).clientX - x0)}px`)
+      }
+      else {
+        x[0].style.setProperty('clip-path', `polygon(0% 0%, 1% 0%,${Math.round((((unify(e).clientX - x0) / screen.width)*50)+10)}% 69%, ${Math.round((((unify(e).clientX - x0) / screen.width)*70)+13)}% 73%, ${Math.round((((unify(e).clientX - x0) / screen.width)*80)+16)}% 76%, ${Math.round((((unify(e).clientX - x0) / screen.width)*90)+18)}% 78%, ${Math.round((((unify(e).clientX - x0) / screen.width)*100)+18)}% 80%, ${Math.round((((unify(e).clientX - x0) / screen.width)*90)+18)}% 82%, ${Math.round((((unify(e).clientX - x0) / screen.width)*80)+16)}% 84%, ${Math.round((((unify(e).clientX - x0) / screen.width)*70)+13)}% 87%, ${Math.round((((unify(e).clientX - x0) / screen.width)*50)+10)}% 91%, 5% 100%, 0% 100%`);
+        //clip-path: polygon(0% 0%, 1% 0%, 10% 69%, 13% 73%, 16% 76%, 18% 78%, 18% 80%, 18% 82%, 16% 84%, 13% 87%, 10% 91%, 5% 100%, 0% 100%);
+        //clip-path: polygon(0% 0%, 1% 0%, 34% 69%, 46% 73%, 54% 76%, 60% 78%, 65% 80%, 60% 82%, 54% 84%, 46% 87%, 34% 91%, 5% 100%, 0% 100%);
+        x[0].querySelector('.next').style.setProperty('--tx', `${Math.round(unify(e).clientX - x0)}px`);
+        //document.querySelectorAll('.swipe-content').setAttribute('style','transform:translateX(calc(' + Math.round(unify(e).clientX - x0) + 'px));');
+        //_C.style.setProperty('--tx', `${Math.round(unify(e).clientX - x0)}px`)
+      }
+    
   }   
 };
 
@@ -462,18 +473,6 @@ function move(e) {
 
             f = 1 - f
 
-    
-            x[0].style.setProperty('--tx', '0%');
-            x[0].querySelector('.next').style.setProperty('--tx', `0px`);
-            x[0].classList.toggle('smooth', !(locked = false));
-            x[0].setAttribute('onclick','');
-            x[0].setAttribute('onmousedown','lock(event); return false;');
-            x[0].setAttribute('ontouchstart','lock(event); return false;');
-            x[0].setAttribute('onmouseup','move(event); return false;');
-            x[0].setAttribute('ontouchend','move(event); return false;');
-            x[0].setAttribute('ontouchmove','e => {e.preventDefault(this)}; return false;');
-            x[0].setAttribute('onmousemove','drag(event); return false;');
-            x[0].setAttribute('ontouchmove','drag(event); return false;');
             x0 = null
         }
 

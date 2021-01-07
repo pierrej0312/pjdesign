@@ -2556,14 +2556,14 @@ main .latestworksList .latestwork img {
 
 @media screen and (max-width: 700px) {
   main .latestworksList .latestwork img {
-    width: 80vw;
-    height: auto;
+    width: auto;
+    height: 20%;
     margin-bottom: 50px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
-    -webkit-transform: translateY(-10vh) translateX(0vw);
-            transform: translateY(-10vh) translateX(0vw);
+    -webkit-transform: translateY(0vh) translateX(0vw);
+            transform: translateY(0vh) translateX(0vw);
   }
 }
 
