@@ -209,7 +209,7 @@ window.addEventListener("scroll", ()=> {
     }
 });
 
-let scrollfadetreePanel = window.innerHeight*1.6 + 400;
+let scrollfadetreePanel = window.innerHeight*1.8 + 400;
 
 window.addEventListener("scroll", ()=> {
     
@@ -429,7 +429,7 @@ function move(e) {
 
         console.log(dx);
   
-    if((i < 0 || s > 0) && f > .5)/*else*/ {
+    if((i < 0 || s > 0) && f > .25)/*else*/ {
 
         if (currentTab > 0 && currentTab < x.length) {
             x[currentTab - 1].classList.remove("prevSlide")
@@ -658,20 +658,60 @@ function toscrollwhyme() {
 };
 
 //open & close Work
+let fadeDownIn = function() {
+    let work = document.querySelector(".Work.open");
+    let fadeDown = work.querySelectorAll(".fade-down");
+    window.addEventListener("scroll", function(e) {
+        fadeDown.forEach(function(item, index, arr) {
+            if(item.offsetTop < window.scrollY+600){
+                item.classList.add('start');
+            }
+            else{
+                item.classList.remove('start');
+            }
+        })
+    });/*
+    fadeDown.forEach(element => {
+        console.log(element);
+        window.addEventListener("scroll", function(element) {
+            if(document.body.srollTop == this.offsetTop){
+                this.classList.add('start');
+            }
+        })
+    })*//*
+    fadeDown.forEach(element => {
+        window.addEventListener("scroll", ()=> {
+            if(document.body.scrollTop == element.offsetTop || document.documentElement.scrollTop == element.offsetTop) {
+                element.classList.add("start");
+            }
+        });
+    })*/
+    /*
+    window.addEventListener("scroll", ()=> {
+    if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.querySelector("header").classList.add("scrolled");
+      }
+    else {
+        document.querySelector("header").classList.remove("scrolled");
+    }
+    });*/
+};
+
 
 function openWorkBalabulle() {
     var balabulle = document.querySelector(".Work.balabulle");
         balabulle.classList.add("open"); 
         document.querySelector("main").classList.add("hide"); 
-        document.querySelector("header").classList.add("scrolled");
+        document.querySelector("header").classList.add("white");
         document.querySelector(".inside-nav").classList.add("hide");
         document.documentElement.scrollTop = 0;
+        fadeDownIn();
 }
 function closeWorkBalabulle() {
     var balabulle = document.querySelector(".Work.balabulle.open");
         balabulle.classList.remove("open"); 
         document.querySelector("main").classList.remove("hide"); 
-        document.querySelector("header").classList.remove("scrolled");
+        document.querySelector("header").classList.remove("white");
         document.querySelector(".inside-nav").classList.remove("hide");
         document.documentElement.scrollTop = window.innerHeight;
 }
@@ -679,15 +719,16 @@ function openWorkWallcom() {
     var balabulle = document.querySelector(".Work.wallcom");
         balabulle.classList.add("open"); 
         document.querySelector("main").classList.add("hide"); 
-        document.querySelector("header").classList.add("scrolled");
+        document.querySelector("header").classList.add("white");
         document.querySelector(".inside-nav").classList.add("hide");
         document.documentElement.scrollTop = 0;
+        fadeDownIn();
 }
 function closeWorkWallcom() {
     var balabulle = document.querySelector(".Work.wallcom.open");
         balabulle.classList.remove("open"); 
         document.querySelector("main").classList.remove("hide"); 
-        document.querySelector("header").classList.remove("scrolled");
+        document.querySelector("header").classList.remove("white");
         document.querySelector(".inside-nav").classList.remove("hide");
         document.documentElement.scrollTop = window.innerHeight;
 }
@@ -695,15 +736,16 @@ function openWorkPotagio() {
     var balabulle = document.querySelector(".Work.potagio");
         balabulle.classList.add("open"); 
         document.querySelector("main").classList.add("hide"); 
-        document.querySelector("header").classList.add("scrolled");
+        document.querySelector("header").classList.add("white");
         document.querySelector(".inside-nav").classList.add("hide");
         document.documentElement.scrollTop = 0;
+        fadeDownIn();
 }
 function closeWorkPotagio() {
     var balabulle = document.querySelector(".Work.potagio.open");
         balabulle.classList.remove("open"); 
         document.querySelector("main").classList.remove("hide"); 
-        document.querySelector("header").classList.remove("scrolled");
+        document.querySelector("header").classList.remove("white");
         document.querySelector(".inside-nav").classList.remove("hide");
         document.documentElement.scrollTop = window.innerHeight;
 }
@@ -711,15 +753,16 @@ function openWorkChevetogne() {
     var balabulle = document.querySelector(".Work.chevetogne");
         balabulle.classList.add("open");
         document.querySelector("main").classList.add("hide"); 
-        document.querySelector("header").classList.add("scrolled");
+        document.querySelector("header").classList.add("white");
         document.querySelector(".inside-nav").classList.add("hide");
         document.documentElement.scrollTop = 0;
+        fadeDownIn();
 }
 function closeWorkChevetogne() {
     var balabulle = document.querySelector(".Work.chevetogne.open");
         balabulle.classList.remove("open"); 
         document.querySelector("main").classList.remove("hide"); 
-        document.querySelector("header").classList.remove("scrolled");
+        document.querySelector("header").classList.remove("white");
         document.querySelector(".inside-nav").classList.remove("hide");
         document.documentElement.scrollTop = window.innerHeight;
 }

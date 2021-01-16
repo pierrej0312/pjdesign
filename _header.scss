@@ -237,6 +237,7 @@ header {
 @media screen and (min-width: 1000px) {
     @import 'header-desktop';
 }
-header.scrolled {
+header.scrolled,
+header.white {
     background: $white;
 }
